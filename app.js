@@ -5,21 +5,13 @@ const { getChart } = require('./billboard-top-100.js');
 var server = http.createServer(function(req, res) {
     console.log('request was made: ' + req.url)
 
+    //outputsjson
     res.writeHead(200, {'Content-Type': 'application/json'});
     getChart('hot-100', (err, chart) => {
       if (err) console.log(err);
       console.log(chart.songs); 
       res.end(JSON.stringify(chart.songs));
     });
-  
-    //outputsjsonßß
-    // res.writeHead(200, {'Content-Type': 'application/json'});
-    // var myObj = {
-    //   name: 'alex',
-    //   job: 'dumass',
-    //   age: '12'
-    // }
-    // res.end(JSON.stringify(myObj));
 
     //outputs html
     //res.writeHead(200, {'Content-Type': 'text/html'});
@@ -37,6 +29,7 @@ getChart('hot-100', (err, chart) => {
     // console.log(chart.songs); 
     
   });
+
   
 server.listen(8080, '127.0.0.1');
 console.log('listening to port 8080');
