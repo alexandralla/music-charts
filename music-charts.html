@@ -1,4 +1,10 @@
+
+
+<script src="app.js" type="text/javascript"></script>
+<link href="music-charts.css" type="text/css" rel="stylesheet">
+
 <!-- HTML Code -->
+
 <html>
 
 <head>
@@ -10,14 +16,16 @@
         <a href="#topSongs">Top Songs</a>
         <a href="#topArtists">Top Artists</a>
         <a href="#topAlbums">Top Albums</a>
-    </div>
+    </div><br>
 
-    <p id="roddy">hello im roddy</p>
-    <script>
-        var txt = '{"rank":1,"title":"The Box","artist":"Roddy Ricch","cover":"https://charts-static.billboard.com/img/2019/12/roddy-ricch-eqp-the-box-2k7-53x53.jpg","position":{"positionLastWeek":1,"peakPosition":1,"weeksOnChart":11}}'
-        var obj = JSON.parse(txt);
-        document.getElementById("roddy").innerHTML = obj.rank + ", " + obj.title + ", " + obj.artist;
-    </script>
+    <div>
+        <p id="roddy">failed</p>
+        <script>
+            var txt = done();
+            var obj = JSON.parse(txt);
+            document.getElementById("roddy").innerHTML = obj.rank + ", " + obj.title + ", " + obj.artist;
+        </script>
+    </div>
 
     <!-- <figure>
         <img src="pixel.gif" alt="roddy" onload="this.onload=null; this.src=getCover();" />
@@ -32,5 +40,4 @@
 
 </html>
 
-<script  src="app.js"></script>
-<link href="music-charts.css" type="text/css" rel="stylesheet">
+

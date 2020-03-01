@@ -10,7 +10,10 @@ var server = http.createServer(function(req, res) {
     getChart('hot-100', (err, chart) => {
       if (err) console.log(err);
       
-      console.log(chart.songs);
+      console.log(chart.songs[0]);
+
+      var roddyRich = chart.songs[0];
+      console.log(JSON.stringify(roddyRich));
 
       // var data = chart.songs;
       // console.log(chart.songs[0].artist);
@@ -29,17 +32,23 @@ var server = http.createServer(function(req, res) {
     // res.end('head ass')  //send data back into client, expects string or buffer
 });
 
+
+
 getChart('hot-100', (err, chart) => {
     if (err) console.log(err);
-
     // console.log(chart.songs); 
-    
-  });
+});
 
-  function done() {
-    return "done function";
-  }
 
+function done() {
+  // const { getChart } = require('./billboard-top-100.js');
+  // var roddyRich;
+  //   getChart('hot-100', (err, chart) => {
+  //     if (err) console.log(err);
+  //     roddyRich = chart.songs[0];
+  //   });
+  return '{"rank":1,"title":"The Box","artist":"Roddy Ricch","cover":"https://charts-static.billboard.com/img/2019/12/roddy-ricch-eqp-the-box-2k7-53x53.jpg","position":{"positionLastWeek":1,"peakPosition":1,"weeksOnChart":11}}';
+}
   
 server.listen(8080, '127.0.0.1');
 console.log('listening to port 8080');
