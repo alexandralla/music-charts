@@ -4,16 +4,37 @@ const { getChart } = require('./billboard-top-100.js');
 
 var server = http.createServer(function(req, res) {
     console.log('request was made: ' + req.url)
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    var myReadStream = fs.createReadStream(__dirname + '/headass.html', 'utf8');
-    myReadStream.pipe(res);
-    // res.end('head ass')
+
+    res.writeHead(200, {'Content-Type': 'application/json'});
+    getChart('hot-100', (err, chart) => {
+      if (err) console.log(err);
+      console.log(chart.songs); 
+      res.end(JSON.stringify(chart.songs));
+    });
+  
+    //outputsjsonßß
+    // res.writeHead(200, {'Content-Type': 'application/json'});
+    // var myObj = {
+    //   name: 'alex',
+    //   job: 'dumass',
+    //   age: '12'
+    // }
+    // res.end(JSON.stringify(myObj));
+
+    //outputs html
+    //res.writeHead(200, {'Content-Type': 'text/html'});
+    // var myReadStream = fs.createReadStream(__dirname + '/headass.html', 'utf8');
+    // myReadStream.pipe(res);
+    
+    // prints inputed text to server
+    //res.writeHead(200, {'Content-Type': 'text/plain'});
+    // res.end('head ass')  //send data back into client, expects string or buffer
 });
 
 getChart('hot-100', (err, chart) => {
     if (err) console.log(err);
 
-    console.log(chart.songs); 
+    // console.log(chart.songs); 
     
   });
   
