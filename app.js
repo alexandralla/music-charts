@@ -9,8 +9,14 @@ var server = http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'application/json'});
     getChart('hot-100', (err, chart) => {
       if (err) console.log(err);
-      console.log(chart.songs); 
+      
+      console.log(chart.songs);
+
+      // var data = chart.songs;
+      // console.log(chart.songs[0].artist);
+      // console.log(JSON.stringify(data));
       res.end(JSON.stringify(chart.songs));
+
     });
 
     //outputs html
@@ -29,6 +35,10 @@ getChart('hot-100', (err, chart) => {
     // console.log(chart.songs); 
     
   });
+
+  function done() {
+    return "done function";
+  }
 
   
 server.listen(8080, '127.0.0.1');
