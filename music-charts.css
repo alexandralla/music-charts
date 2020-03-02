@@ -3,17 +3,15 @@
 }
 
 .navbar {
-    padding-left: 190;
-  } 
+    display: flex;
+    justify-content: center;
+
+}
    
    .navbar a {
-     float: left;
-     text-align: justify;
-     list-style-type: none;
      padding: 20px 50px;
-     display: flex; 
-     justify-content: space-around;
      text-decoration: none; 
+     list-style-type: none;
      color: rgb(128, 1, 1);
      font-size: 30;
      font-family: ‘Lato’, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
@@ -21,8 +19,6 @@
    
    .navbar a:hover, a:focus  {
        text-decoration: underline;
-       text-underline-offset: 10px;
-       text-decoration-thickness: 10px;
        color: rgb(53, 1, 1);
    }
 
