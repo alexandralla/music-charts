@@ -39,30 +39,30 @@
     color: black;
 }
 
-.box.box1 {
+.box.top-song{
     grid-column: 1;
     grid-row: 1;
 }
 
-.box.box2 {
+.box.top-vid {
     grid-column: 2;
     grid-row: 1;
 }
 
-.box.box3 {
+.box.top-100 {
     width: 500px;
     height: 640px;
     grid-column: 3 / span 2;
     grid-row: 1 / span 2;
 }
 
-.box.box4 {
+.box.top-artists {
     width: 800px;
     grid-column: 1 / span 2;
     grid-row: 2;
 }
 
-.box.box5 {
+.box.top-albums {
     width: 1300px;
     grid-row: 3;
     grid-column: 1 / span 4;
