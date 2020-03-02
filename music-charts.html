@@ -1,7 +1,5 @@
-
-
 <script src="app.js" type="text/javascript"></script>
-<link href="music-charts.css" type="text/css" rel="stylesheet">
+
 
 <!-- HTML Code -->
 
@@ -9,23 +7,22 @@
 
 <head>
     <figure id=logo>
-        <img src="logo.png" alt="Billboard Logo">
+        <img src="https://raw.githubusercontent.com/darthbatman/billboard-top-100/HEAD/logo.png" alt="Billboard Logo">
     </figure>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#topSongs">Top Songs</a>
-        <a href="#topArtists">Top Artists</a>
-        <a href="#topAlbums">Top Albums</a>
+        <a href="#today">Today</a>
+        <a href="#week">One Week Ago</a>
+        <a href="#month">One Month Ago</a>
+        <a href="#year">One Year Ago</a>
     </div><br>
 
-    <div>
-        <p id="roddy">failed</p>
-        <script>
+    <!-- <div>
+        <p id="roddy">failed</p> -->
+        <!-- <script>
             var txt = done();
-            var obj = JSON.parse(txt);
-            document.getElementById("roddy").innerHTML = obj.rank + ", " + obj.title + ", " + obj.artist;
-        </script>
-    </div>
+           document.getElementById("roddy").innerHTML = txt.rank + ", " + txt.title + ", " + txt.artist;
+        </script> -->
+    <!-- </div> -->
 
     <!-- <figure>
         <img src="pixel.gif" alt="roddy" onload="this.onload=null; this.src=getCover();" />
@@ -38,6 +35,9 @@
 
 </body>
 
+<link href="music-charts.css" type="text/css" rel="stylesheet">
 </html>
+
+
 
 
