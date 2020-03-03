@@ -1,4 +1,4 @@
-<script src="app.js" type="text/javascript"></script>
+<script src="app2.js" type="text/javascript"></script>
 
 
 <!-- HTML Code -->
@@ -15,36 +15,42 @@
         <a href="#month">One Month Ago</a>
         <a href="#year">One Year Ago</a>
     </div><br>
+</head>
 
+<body>
     <div class="content">
-        <div class="box top-song">Top Song</div>
-        <div class="box top-vid">Youtube Vid</div>
+        <div class="box top-song">Top Song
+            <p class=top-song-details id="rank">rank failed</p>
+            <p class=top-song-details id="title">title failed</p>
+            <p class=top-song-details id="artist">artist failed</p>
+            <p class=top-song-details id="cover">cover failed</p>
+            <script>
+                var txt = done();
+                document.getElementById("rank").innerHTML = txt.rank;
+                document.getElementById("title").innerHTML = txt.title;
+                document.getElementById("artist").innerHTML = txt.artist;
+                document.getElementById("cover").innerHTML = txt.cover;
+            </script>
+        </div>
+        <div class="box top-vid">Check out the #1 song!
+            <iframe class=youtubevid width="370" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <!-- <iframe class=youtubevid width="370" height="250" src="https://www.youtube.com/embed/UNZqm3dxd2w">
+            </iframe> -->
+        </div>
         <div class="box top-100">The Top 100</div>
-        <div class="box top-artists">Top Artists</div>
-        <div class="box top-albums">Top Albums</div>
+        <div class="box top-artists">HOT Artists</div>
+        <div class="box top-albums">HOT Albums</div>
     </div>
-   <!-- <div>
-        <p id="roddy">failed</p>
-        <script>
-            var txt = done();
-           document.getElementById("roddy").innerHTML = txt.rank + ", " + txt.title + ", " + txt.artist;
-        </script>
-    </div> -->
+
 
     <!-- <figure>
         <img src="pixel.gif" alt="roddy" onload="this.onload=null; this.src=getCover();" />
         <img src="pixel.gif" alt="roddy" onload="this.onload=null; this.src=getCover();" />
         https://charts-static.billboard.com/img/2019/12/roddy-ricch-eqp-the-box-2k7-53x53.jpg
     </figure> -->
-</head>
-
-<body>
-
 </body>
 
 <link href="music-charts.css" type="text/css" rel="stylesheet">
+
 </html>
-
-
-
-
