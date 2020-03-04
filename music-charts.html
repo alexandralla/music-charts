@@ -5,9 +5,17 @@
 
 <html>
 
+<script>console.log("test12345")</script>
+
 <head>
-    <figure id=logo>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <figure id=logo >
+        <!-- <img src="musicgif.gif" alt="musical notes"  height="160" width="60"> -->
         <img src="https://raw.githubusercontent.com/darthbatman/billboard-top-100/HEAD/logo.png" alt="Billboard Logo">
+        <!-- <img src="musicgif.gif" alt="musical notes"  height="160" width="60"> -->
     </figure>
     <div class="navbar">
         <a href="#today">Today</a>
@@ -15,9 +23,7 @@
         <a href="#month">One Month Ago</a>
         <a href="#year">One Year Ago</a>
     </div><br>
-</head>
 
-<body>
     <div class="content">
         <div class="box top-song">Top Song
             <p class=top-song-details id="rank">rank failed</p>
@@ -25,11 +31,18 @@
             <p class=top-song-details id="artist">artist failed</p>
             <p class=top-song-details id="cover">cover failed</p>
             <script>
-                var txt = done();
-                document.getElementById("rank").innerHTML = txt.rank;
-                document.getElementById("title").innerHTML = txt.title;
-                document.getElementById("artist").innerHTML = txt.artist;
-                document.getElementById("cover").innerHTML = txt.cover;
+                console.log("in script in div");
+                $.getJSON( "test.js", function(json) {
+                    console.log("IN GET JSON REQ");
+                    document.getElementById("artist").innerHTML = txt.artist;
+                    console.log( "JSON Data: " + json[0].artist );
+                });
+
+                // var txt = null;
+                // document.getElementById("rank").innerHTML = txt.rank;
+                // document.getElementById("title").innerHTML = txt.title;
+                
+                // document.getElementById("cover").innerHTML = txt.cover;
             </script>
         </div>
         <div class="box top-vid">Check out the #1 song!
@@ -38,11 +51,54 @@
             <!-- <iframe class=youtubevid width="370" height="250" src="https://www.youtube.com/embed/UNZqm3dxd2w">
             </iframe> -->
         </div>
-        <div class="box top-100">The Top 100</div>
-        <div class="box top-artists">HOT Artists</div>
-        <div class="box top-albums">HOT Albums</div>
+        <div class="box top-100">The Top 100
+            <ol class="top-100-listing">
+                <li class="top-100-listing top-100-obj">1</li>
+                <li class="top-100-listing top-100-obj">2</li>
+                <li class="top-100-listing top-100-obj">3</li>
+                <li class="top-100-listing top-100-obj">4</li>
+                <li class="top-100-listing top-100-obj">5</li>
+                <li class="top-100-listing top-100-obj">6</li>
+                <li class="top-100-listing top-100-obj">7</li>
+                <li class="top-100-listing top-100-obj">8</li>
+                <li class="top-100-listing top-100-obj">9</li>
+                <li class="top-100-listing top-100-obj">10</li>
+                <li class="top-100-listing top-100-obj">11</li>
+                <li class="top-100-listing top-100-obj">12</li>
+                <li class="top-100-listing top-100-obj">13</li>
+                <li class="top-100-listing top-100-obj">14</li>
+                <li class="top-100-listing top-100-obj">15</li>      
+              </ol> 
+        </div>
+        <div class="box top-artists">HOT Artists
+            <ol class="top-artists-listing">
+                <li class="top-artists-listing top-artists-obj">1</li>
+                <li class="top-artists-listing top-artists-obj">2</li>
+                <li class="top-artists-listing top-artists-obj">3</li>
+                <li class="top-artists-listing top-artists-obj">4</li>
+                <li class="top-artists-listing top-artists-obj">5</li>
+                <li class="top-artists-listing top-artists-obj">6</li>
+                <li class="top-artists-listing top-artists-obj">7</li>
+                <li class="top-artists-listing top-artists-obj">8</li>
+                <li class="top-artists-listing top-artists-obj">9</li>
+                <li class="top-artists-listing top-artists-obj">10</li>
+            </ol>
+        </div>
+        <div class="box top-albums">HOT Albums
+            <ol class="top-albums-listing">
+                <li class="top-albums-listing top-albums-obj">1</li>
+                <li class="top-albums-listing top-albums-obj">2</li>
+                <li class="top-albums-listing top-albums-obj">3</li>
+                <li class="top-albums-listing top-albums-obj">4</li>
+                <li class="top-albums-listing top-albums-obj">5</li>
+                <li class="top-albums-listing top-albums-obj">6</li>
+                <li class="top-albums-listing top-albums-obj">7</li>
+                <li class="top-albums-listing top-albums-obj">8</li>
+                <li class="top-albums-listing top-albums-obj">9</li>
+                <li class="top-albums-listing top-albums-obj">10</li>
+            </ol>
+        </div>
     </div>
-
 
     <!-- <figure>
         <img src="pixel.gif" alt="roddy" onload="this.onload=null; this.src=getCover();" />

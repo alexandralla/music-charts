@@ -1,3 +1,4 @@
+
 * {
     background-color: #EDEDED;
     font-family: "Arial Black", Gadget, sans-serif;
@@ -11,7 +12,6 @@
 .navbar {
     display: flex;
     justify-content: center;
-
 }
    .navbar a {
      padding: 0px 50px;
@@ -41,8 +41,7 @@
     height: 300px;
     margin: 3px;
     padding: 10px;
-    background-color: white;
-    border: 5px inset red;
+    border: 5px inset #FC4445;
     color: white;
 }
 
@@ -51,14 +50,26 @@
     background-color: #F7C200;
     grid-column: 1;
     grid-row: 1;
+    color: rgb(29, 29, 29);
+}
+
+.top-song-details {
+    background-color: #F7C200;
+    font-size: 18px;
 }
 
 .box.top-vid {
     font-size: 25px;
-    background-color: #519DD9;
+    background-color: #53BAC1;
     grid-column: 2;
     grid-row: 1;
-    
+}
+
+.youtubevid {
+    background-color: #53BAC1;
+    border: none;
+    padding-left: 5px;
+    align-self: center;
 }
 
 .box.top-100 {
@@ -66,39 +77,89 @@
     background-color: #F7C200;
     width: 500px;
     height: 650px;
+    overflow: auto;
     grid-column: 3 / span 2;
     grid-row: 1 / span 2;
+    color: rgb(29, 29, 29);
+}
+
+.top-100-listing {
+    margin-left: -10px;
+    background-color: #F7C200;
+    color: rgb(29, 29, 29);
+    margin-bottom: 20px;
+}
+
+.top-100-listing.top-100-obj {
+    background-color: #EDEDED;
+    padding-left: 10px;
+    list-style-type: none; 
+    border: 2px outset #FC4445;
+    font-size: 20px;
+    height: 200px;
 }
 
 .box.top-artists {
     font-size: 30px;
-    background-color: #53BAC1;
+    background-color: #519DD9;
     width: 830px;
     grid-column: 1 / span 2;
     grid-row: 2;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.top-artists-listing {
+    margin-left: -10px;
+    background-color: #519DD9;
+    color: rgb(29, 29, 29);
+    margin-right: 20px;
+}
+
+.top-artists-listing.top-artists-obj {
+    background-color: #EDEDED;
+    padding-left: 10px;
+    list-style-type: none; 
+    border: 2px outset #FC4445;
+    font-size: 20px;
+    height: 230px;
+    width: 230px;
+    display: inline-block;
+    
 }
 
 .box.top-albums {
     font-size: 30px;
-    background-color: #519DD9;
+    background-color: #53BAC1;
     width: 1380px;
     grid-row: 3;
     grid-column: 1 / span 4;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.top-albums-listing {
+    margin-left: -10px;
+    background-color: #53BAC1;
+    color: rgb(29, 29, 29);
+    margin-right: 20px;
+}
+
+.top-albums-listing.top-albums-obj {
+    background-color: #EDEDED;
+    padding-left: 10px;
+    list-style-type: none; 
+    border: 2px outset #FC4445;
+    font-size: 20px;
+    height: 230px;
+    width: 230px;
+    display: inline-block;
+    
 }
 
 #logo {
+    margin-left:auto;
+    margin-right:auto;
     text-align: center;
-    margin: 0px;
-}
-
-.top-song-details {
-    background-color: #F7C200;
-    font-size: 18px;
-}
-   
-.youtubevid {
-    background-color: #519DD9;
-    border: none;
-    padding-left: 5px;
-    align-self: center;
+    margin: 0px 10px;
 }
