@@ -1,4 +1,5 @@
 <script src="app2.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 
 <!-- HTML Code -->
@@ -32,17 +33,20 @@
             <p class=top-song-details id="cover">cover failed</p>
             <script>
                 console.log("in script in div");
-                $.getJSON( "test.js", function(json) {
-                    console.log("IN GET JSON REQ");
-                    document.getElementById("artist").innerHTML = txt.artist;
-                    console.log( "JSON Data: " + json[0].artist );
+                $.getJSON("test.json", function(json) {
+                    console.log(json);      // returns entire json response
+                    console.log(json[0]);   // returns #1 song object in json response
+                    console.log(json[0].title);   // returns #1 song object title
+                    console.log(json[0].artist);   // returns #1 song object artist
+                    console.log(json[0].cover);   // returns #1 song object cover
+
+                    document.getElementById("rank").innerHTML = json[0].rank;
+                    document.getElementById("title").innerHTML = json[0].title;
+                    document.getElementById("artist").innerHTML = json[0].artist;
+                    document.getElementById("cover").innerHTML = json[0].cover;
                 });
 
-                // var txt = null;
-                // document.getElementById("rank").innerHTML = txt.rank;
-                // document.getElementById("title").innerHTML = txt.title;
-                
-                // document.getElementById("cover").innerHTML = txt.cover;
+
             </script>
         </div>
         <div class="box top-vid">Check out the #1 song!
@@ -62,12 +66,7 @@
                 <li class="top-100-listing top-100-obj">7</li>
                 <li class="top-100-listing top-100-obj">8</li>
                 <li class="top-100-listing top-100-obj">9</li>
-                <li class="top-100-listing top-100-obj">10</li>
-                <li class="top-100-listing top-100-obj">11</li>
-                <li class="top-100-listing top-100-obj">12</li>
-                <li class="top-100-listing top-100-obj">13</li>
-                <li class="top-100-listing top-100-obj">14</li>
-                <li class="top-100-listing top-100-obj">15</li>      
+                <li class="top-100-listing top-100-obj">10</li>  
               </ol> 
         </div>
         <div class="box top-artists">HOT Artists
