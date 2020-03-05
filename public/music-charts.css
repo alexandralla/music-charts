@@ -5,10 +5,6 @@
     margin: 5px;
 }
 
-.header {
-   
-}
-   
 .navbar {
     display: flex;
     justify-content: center;
@@ -125,7 +121,6 @@
     height: 230px;
     width: 230px;
     display: inline-block;
-    
 }
 
 .box.top-albums {
@@ -143,6 +138,7 @@
     background-color: #53BAC1;
     color: rgb(29, 29, 29);
     margin-right: 20px;
+    margin-top: 30px;
 }
 
 .top-albums-listing.top-albums-obj {
@@ -154,7 +150,6 @@
     height: 230px;
     width: 230px;
     display: inline-block;
-    
 }
 
 #logo {
@@ -162,4 +157,19 @@
     margin-right:auto;
     text-align: center;
     margin: 0px 10px;
+}
+
+h4 {
+    position: absolute; 
+    background-color: transparent; 
+    padding: 1px 1px;
+}
+
+.top-100.top-100-header {
+    position: absolute;
+    background-color:#F7C200; 
+    padding: 5px 10px;
+    width: 485px;
+    top: 259px;
+    left: 897px;
 }
