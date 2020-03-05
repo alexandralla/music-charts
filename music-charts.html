@@ -30,7 +30,7 @@
             <p class=top-song-details id="rank">rank failed</p>
             <p class=top-song-details id="title">title failed</p>
             <p class=top-song-details id="artist">artist failed</p>
-            <p class=top-song-details id="cover">cover failed</p>
+            <img class=top-song-details id="cover" style="height: 100px; width: 100px;"></img>
             <script>
                 console.log("in script in div");
                 $.getJSON("test.json", function(json) {
@@ -43,10 +43,8 @@
                     document.getElementById("rank").innerHTML = json[0].rank;
                     document.getElementById("title").innerHTML = json[0].title;
                     document.getElementById("artist").innerHTML = json[0].artist;
-                    document.getElementById("cover").innerHTML = json[0].cover;
+                    document.getElementById("cover").src = json[0].cover;
                 });
-
-
             </script>
         </div>
         <div class="box top-vid">Check out the #1 song!
@@ -67,7 +65,7 @@
                 <li class="top-100-listing top-100-obj">7</li>
                 <li class="top-100-listing top-100-obj">8</li>
                 <li class="top-100-listing top-100-obj">9</li>
-                <li class="top-100-listing top-100-obj">10</li>  
+                <li class="top-100-listing top-100-obj">10</li>
               </ol> 
         </div>
         <div class="box top-artists">
