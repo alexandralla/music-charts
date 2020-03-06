@@ -66,7 +66,15 @@ function getCoverFromChartItem(chartItem, $) {
   try {
     if (chartItem.title_images.sizes) {
       // try to get original size
-      image = chartItem.title_images.sizes.original;
+      image = chartItem.title_images.sizes.medium;
+      console.log(chartItem.title_images.sizes);
+
+      if (!image && chartItem) {
+        // get any size available
+
+        image = chartItem.title_images.sizes.small;
+      }
+
       if (!image && chartItem) {
         // get any size available
         const size = Object.keys(chartItem.title_images.sizes)[0];
