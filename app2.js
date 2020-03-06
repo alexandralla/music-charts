@@ -1,8 +1,11 @@
+/* eslint-disable prefer-destructuring */
+/* eslint-disable no-undef */
 /* eslint-disable no-console */
 /* eslint-disable import/newline-after-import */
 const express = require('express');
 const app = express(); // routes attached on this app instance
 const { getChart } = require('./billboard-top-100.js');
+const { listCharts } = require('./billboard-top-100.js');
 const fs = require('fs');
 app.use(express.static(`${__dirname}/public`));
 
@@ -62,18 +65,30 @@ getChart('hot-100', (err, chart) => {
   console.log('today.json was created!');
 });
 
-// CREATE WEEK JSON
-weekDate = getDate(7);
-getChart('hot-100', weekDate, (err, chart) => {
+// CREATE TODAY ARTISTS JSON
+getChart('artist-100', (err, chart) => {
   if (err) console.log(err);
   songs = chart.songs;
   const data = JSON.stringify(songs, null, 2);
-  fs.writeFileSync('week.json', data, (err) => {
+  fs.writeFileSync('today-artists.json', data, (err) => {
     if (err) {
       console.log(err);
     }
   });
-  console.log('WEEK.json was created!');
+  console.log('today-artists.json was created!');
+});
+
+// CREATE TODAY ALBUMS JSON
+getChart('top-album-sales', (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('today-albums.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('today-albums.json was created!');
 });
 
 // CREATE MONTH JSON
@@ -87,7 +102,73 @@ getChart('hot-100', monthDate, (err, chart) => {
       console.log(err);
     }
   });
-  console.log('MONTH.json was created!');
+  console.log('month.json was created!');
+});
+
+// CREATE MONTH ARTISTS JSON
+getChart('artist-100', monthDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('month-artists.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('month-artists.json was created!');
+});
+
+// CREATE MONTH ALBUMS JSON
+getChart('top-album-sales', monthDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('month-albums.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('month-albums.json was created!');
+});
+
+// // CREATE HALFYEAR JSON
+halfYearDate = getDate(183);
+getChart('hot-100', halfYearDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('half-year.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('half-year.json was created!');
+});
+
+// CREATE HALF ARTISTS JSON
+getChart('artist-100', halfYearDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('half-year-artists.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('half-year-artists.json was created!');
+});
+
+// CREATE WEEK ALBUMS JSON
+getChart('top-album-sales', halfYearDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('half-year-albums.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('half-year-albums.json was created!');
 });
 
 // CREATE YEAR JSON
@@ -101,8 +182,39 @@ getChart('hot-100', yearDate, (err, chart) => {
       console.log(err);
     }
   });
-  console.log('YEAR.json was created!');
+  console.log('year.json was created!');
 });
+
+// CREATE YEAR ARTISTS JSON
+getChart('artist-100', yearDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('year-artists.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('year-artists.json was created!');
+});
+
+// CREATE YEAR ALBUMS JSON
+getChart('top-album-sales', yearDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('year-albums.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('year-albums.json was created!');
+});
+
+// listCharts((err, charts) => {
+//   if (err) console.log(err);
+//   console.log(charts); // prints array of all charts
+// });
 
 app.listen(8080);
 console.log('listening to port 8080');
