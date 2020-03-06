@@ -40,9 +40,9 @@ app.get('/month', (req, res) => {
 
 // CREATES HALFYEAR SERVER
 app.get('/halfYear', (req, res) => {
-    console.log(`request was made: ${req.url}`);
-    res.sendFile(`${__dirname}/music-charts.html`);
-  });
+  console.log(`request was made: ${req.url}`);
+  res.sendFile(`${__dirname}/music-charts.html`);
+});
 
 // CREATES YEAR SERVER
 app.get('/year', (req, res) => {
