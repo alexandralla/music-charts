@@ -32,17 +32,17 @@ app.get('/today', (req, res) => {
   res.sendFile(`${__dirname}/music-charts.html`);
 });
 
-// CREATES WEEK SERVER
-app.get('/week', (req, res) => {
-  console.log(`request was made: ${req.url}`);
-  res.sendFile(`${__dirname}/music-charts.html`);
-});
-
 // CREATES MONTH SERVER
 app.get('/month', (req, res) => {
   console.log(`request was made: ${req.url}`);
   res.sendFile(`${__dirname}/music-charts.html`);
 });
+
+// CREATES HALFYEAR SERVER
+app.get('/halfYear', (req, res) => {
+    console.log(`request was made: ${req.url}`);
+    res.sendFile(`${__dirname}/music-charts.html`);
+  });
 
 // CREATES YEAR SERVER
 app.get('/year', (req, res) => {
