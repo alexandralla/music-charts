@@ -26,24 +26,27 @@
     </div><br>
 
     <div class="content">
-        <div class="box top-song">Top Song
-            <p class=top-song-details id="rank">rank failed</p>
-            <p class=top-song-details id="title">title failed</p>
-            <p class=top-song-details id="artist">artist failed</p>
-            <img class=top-song-details id="cover" style="height: 100px; width: 100px;"></img>
+        <div class="box top-song">
+            <div class="top-song-header">
+                <p class="number-the">THE</p>
+                <span class="number">#<img class=number1 src="https://www.billboard.com/assets/1583359525/images/charts/number-one.svg?6af5a4550aebfa240dae" width="60px" height="120px"></span>
+                <span class="number-song">SONG</span>
+            </div>
+            <img class="top-song-cover" id="cover"></img>
+            <div class=top-song-details>
+                <p class=top-song-details id="title">title failed</p>
+                <p class=top-song-details id="artist">artist failed</p>
+                <p class=top-song-details id="weeks-on-chart">weeks failed</p>
+            </div>
+           
             <script>
                 console.log("in script in div");
-                $.getJSON("test.json", function(json) {
-                    console.log(json);      // returns entire json response
-                    console.log(json[0]);   // returns #1 song object in json response
-                    console.log(json[0].title);   // returns #1 song object title
-                    console.log(json[0].artist);   // returns #1 song object artist
-                    console.log(json[0].cover);   // returns #1 song object cover
-
-                    document.getElementById("rank").innerHTML = json[0].rank;
+                $.getJSON("today.json", function(json) {
+                    document.getElementById("cover").src = json[0].cover;
                     document.getElementById("title").innerHTML = json[0].title;
                     document.getElementById("artist").innerHTML = json[0].artist;
-                    document.getElementById("cover").src = json[0].cover;
+                    document.getElementById("weeks-on-chart").innerHTML = json[0].position.weeksOnChart + " weeks on chart";
+                    
                 });
             </script>
         </div>
@@ -52,7 +55,7 @@
             </iframe>
         </div>
         <div class="box top-100">
-            <h4 class="top-100 top-100-header">The Top 100</h4>
+            <h4 class="top-100 top-100-header">THE TOP 100</h4>
             <ol class="top-100-listing" style="margin-top: 70px">
                 <li class="top-100-listing top-100-obj">1</li>
                 <li class="top-100-listing top-100-obj">2</li>

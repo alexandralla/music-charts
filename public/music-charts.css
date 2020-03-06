@@ -46,19 +46,28 @@
     background-color: #F7C200;
     grid-column: 1;
     grid-row: 1;
-    color: rgb(29, 29, 29);
+    color: rgb(42, 74, 218);
+    display: grid;
+    padding-bottom: 20;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
 }
 
 .top-song-details {
+    margin-top: 0px;
     background-color: #F7C200;
-    font-size: 18px;
+    font-size: 21px;
 }
 
 .box.top-vid {
-    font-size: 25px;
+    font-size: 30px;
     background-color: #53BAC1;
     grid-column: 2;
     grid-row: 1;
+    text-align: center;
+    color:#EDEDED;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(42, 74, 218);
 }
 
 .youtubevid {
@@ -69,14 +78,17 @@
 }
 
 .box.top-100 {
-    font-size: 30px;
+    font-size: 25px;
     background-color: #F7C200;
     width: 500px;
-    height: 650px;
+    height: 670px;
     overflow: auto;
     grid-column: 3 / span 2;
     grid-row: 1 / span 2;
-    color: rgb(29, 29, 29);
+    color:#EDEDED;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(42, 74, 218);
+    padding-top: 0px;
 }
 
 .top-100-listing {
@@ -157,6 +169,7 @@
     margin-right:auto;
     text-align: center;
     margin: 0px 10px;
+    min-width: 1370;
 }
 
 h4 {
@@ -167,9 +180,59 @@ h4 {
 
 .top-100.top-100-header {
     position: absolute;
-    background-color:#F7C200; 
+    background-color: #F7C200; 
     padding: 5px 10px;
-    width: 485px;
-    top: 259px;
-    left: 897px;
+    width: 470px;
+    margin-top: 0px;
+    padding-top: 7px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.number {
+    background-color: #F7C200;
+    color: white;
+    font-size: 60px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(42, 74, 218);
+    margin-right: 0px;
+}
+.number1 {
+    background-color: #F7C200;
+    margin-left: 0px;
+}
+.number-song {
+    background-color: #F7C200;
+    color:#EDEDED;
+    font-size: 40px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(42, 74, 218);
+    margin: 0px;
+}
+
+.number-the {
+    background-color: #F7C200;
+    color:#EDEDED;
+    font-size: 40px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(42, 74, 218);
+    margin: 0px;
+    padding-left:25px;
+    margin-bottom: 2px;
+}
+
+.top-song-header {
+    background-color: #F7C200;
+    padding-top: 20px;
+    padding-left: 6px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin: 0px;
+}
+
+.top-song-cover {
+    background-color: #F7C200;
+    padding: 10px 10px;
+    grid-column: 2;
+    grid-row: 1;
 }
