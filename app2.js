@@ -19,69 +19,9 @@ function getDate(timeShift) {
   return [year, month, day].join('-');
 }
 
-function createTodayJson() {
-  getChart('hot-100', (err, chart) => {
-    if (err) console.log(err);
-    songs = chart.songs;
-    const data = JSON.stringify(songs, null, 2);
-    fs.writeFileSync('today.json', data, (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-    console.log('test.json was created!');
-  });
-}
-
-function createWeekJson(timeShift) {
-  weekDate = getDate(timeShift);
-  getChart('hot-100', weekDate, (err, chart) => {
-    if (err) console.log(err);
-    songs = chart.songs;
-    const data = JSON.stringify(songs, null, 2);
-    fs.writeFileSync('week.json', data, (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-    console.log('WEEK.json was created!');
-  });
-}
-
-function createMonthJson(timeShift) {
-  monthDate = getDate(timeShift);
-  getChart('hot-100', monthDate, (err, chart) => {
-    if (err) console.log(err);
-    songs = chart.songs;
-    const data = JSON.stringify(songs, null, 2);
-    fs.writeFileSync('month.json', data, (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-    console.log('MONTH.json was created!');
-  });
-}
-
-function createYearJson(timeShift) {
-  yearDate = getDate(timeShift);
-  getChart('hot-100', yearDate, (err, chart) => {
-    if (err) console.log(err);
-    songs = chart.songs;
-    const data = JSON.stringify(songs, null, 2);
-    fs.writeFileSync('year.json', data, (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
-    console.log('YEAR.json was created!');
-  });
-}
-
 // CREATES TODAY SERVER
 app.get('/', (req, res) => {
   console.log(`request was made: ${req.url}`);
-  createTodayJson();
   res.sendFile(`${__dirname}/music-charts.html`);
 });
 
@@ -94,25 +34,75 @@ app.get('/today', (req, res) => {
 // CREATES WEEK SERVER
 app.get('/week', (req, res) => {
   console.log(`request was made: ${req.url}`);
-  createWeekJson(7);
-  res.sendFile(`${__dirname}/alex.html`);
+  res.sendFile(`${__dirname}/music-charts.html`);
 });
 
 // CREATES MONTH SERVER
 app.get('/month', (req, res) => {
   console.log(`request was made: ${req.url}`);
-  createMonthJson(30);
-  res.sendFile(`${__dirname}/alex.html`);
+  res.sendFile(`${__dirname}/music-charts.html`);
 });
 
 // CREATES YEAR SERVER
 app.get('/year', (req, res) => {
   console.log(`request was made: ${req.url}`);
-  createYearJson(365);
-  res.sendFile(`${__dirname}/alex.html`);
+  res.sendFile(`${__dirname}/music-charts.html`);
+});
+
+// CREATE TODAY JSON
+getChart('hot-100', (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('today.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('today.json was created!');
+});
+
+// CREATE WEEK JSON
+weekDate = getDate(7);
+getChart('hot-100', weekDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('week.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('WEEK.json was created!');
+});
+
+// CREATE MONTH JSON
+monthDate = getDate(30);
+getChart('hot-100', monthDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('month.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('MONTH.json was created!');
+});
+
+// CREATE YEAR JSON
+yearDate = getDate(365);
+getChart('hot-100', yearDate, (err, chart) => {
+  if (err) console.log(err);
+  songs = chart.songs;
+  const data = JSON.stringify(songs, null, 2);
+  fs.writeFileSync('year.json', data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+  console.log('YEAR.json was created!');
 });
 
 app.listen(8080);
 console.log('listening to port 8080');
-
-
