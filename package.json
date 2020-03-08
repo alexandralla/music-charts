@@ -10,6 +10,8 @@
     "cheerio": "^0.20.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
+    "express": "^4.17.1",
+    "jade": "^1.11.0",
     "moment": "^2.24.0",
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.5",
