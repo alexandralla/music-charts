@@ -29,7 +29,8 @@ function getDate(timeShift) {
 app.get('/', (req, res) => {
   res.render('music-charts', {topsongtitle: topsong.title, topsongartist: topsong.artist, topsongweeks: topsong.position.weeksOnChart, 
     top100title1: topsong.title, top100artist1: topsong.artist, top100weeks1: topsong.position.weeksOnChart, 
-    top100title2: secondsong.title, top100artist2: secondsong.artist, top100weeks2: secondsong.position.weeksOnChart});
+    top100title2: secondsong.title, top100artist2: secondsong.artist, top100weeks2: secondsong.position.weeksOnChart,
+    top100title3: thirdsong.title, top100artist3: thirdsong.artist, top100weeks3: thirdsong.position.weeksOnChart});
   //console.log(`request was made: ${req.url}`);
   //res.sendFile(`${__dirname}/music-charts.html`);
 });
@@ -218,8 +219,10 @@ fs.readFile('today.json', (err, data) => {
   let chart = JSON.parse(data);
   topsong = utilities.testfunc(chart);
   secondsong = utilities.testfunc2(chart);
+  thirdsong = utilities.testfunc3(chart);
   console.log(topsong);
   console.log(secondsong);
+  console.log(thirdsong);
 });
 
 
