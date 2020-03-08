@@ -7,6 +7,11 @@ const { listCharts } = require('./billboard-top-100.js');
 const fs = require('fs');
 app.use(express.static(`${__dirname}/public`));
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+app.use(express.static(__dirname + '/public'));
+
+
 function getDate(timeShift) {
   const d = new Date();
   d.setDate(d.getDate() - timeShift);
@@ -22,16 +27,20 @@ function getDate(timeShift) {
 
 // CREATES TODAY SERVER
 app.get('/', (req, res) => {
-  console.log(`request was made: ${req.url}`);
-  res.sendFile(`${__dirname}/music-charts.html`);
+  res.render('music-charts', {topsongtitle: topsong.title, topsongartist: topsong.artist, topsongweeks: topsong.position.weeksOnChart, 
+    top100title1: topsong.title, top100artist1: topsong.artist, top100weeks1: topsong.position.weeksOnChart, 
+    top100title2: secondsong.title, top100artist2: secondsong.artist, top100weeks2: secondsong.position.weeksOnChart});
+  //console.log(`request was made: ${req.url}`);
+  //res.sendFile(`${__dirname}/music-charts.html`);
 });
 
 // CREATES TODAY SERVER
 app.get('/today', (req, res) => {
-  console.log(`request was made: ${req.url}`);
-  res.sendFile(`${__dirname}/music-charts.html`);
+  res.render('music-charts', {title: 'Roddy Richhhh'})
+  //console.log(`request was made: ${req.url}`);
+  //res.sendFile(`${__dirname}/music-charts.html`);
 });
-
+/* 
 // CREATES MONTH SERVER
 app.get('/month', (req, res) => {
   console.log(`request was made: ${req.url}`);
@@ -48,7 +57,7 @@ app.get('/halfYear', (req, res) => {
 app.get('/year', (req, res) => {
   console.log(`request was made: ${req.url}`);
   res.sendFile(`${__dirname}/music-charts.html`);
-});
+}); */
 
 // CREATE TODAY JSON
 getChart('hot-100', (err, chart) => {
@@ -61,7 +70,7 @@ getChart('hot-100', (err, chart) => {
   });
   console.log('today.json was created!');
 });
-
+/* 
 // CREATE TODAY ARTISTS JSON
 getChart('artist-100', (err, chart) => {
   if (err) console.log(err);
@@ -196,11 +205,23 @@ getChart('top-album-sales', yearDate, (err, chart) => {
   });
   console.log('year-albums.json was created!');
 });
-
+ */
 // listCharts((err, charts) => {
 //   if (err) console.log(err);
 //   console.log(charts); // prints array of all charts
 // });
+
+const utilities = require('./testjavascript');
+
+fs.readFile('today.json', (err, data) => {
+  if (err) throw err;
+  let chart = JSON.parse(data);
+  topsong = utilities.testfunc(chart);
+  secondsong = utilities.testfunc2(chart);
+  console.log(topsong);
+  console.log(secondsong);
+});
+
 
 app.listen(8080);
 console.log('listening to port 8080');
