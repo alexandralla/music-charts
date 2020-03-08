@@ -1,0 +1,150 @@
+html
+  head
+    h1 #{hello}
+    script(src='app2.js', type='text/javascript')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    // HTML Code
+    script.
+      console.log("test12345")
+    script(src='jquery-3.4.1.min.js')
+  body
+    figure#logo
+      img(src='musicgif.gif', alt='musical notes', height='160', width='60')
+      img(src='https://raw.githubusercontent.com/darthbatman/billboard-top-100/HEAD/logo.png', alt='Billboard Logo')
+      img(src='musicgif.gif', alt='musical notes', height='160', width='60')
+    .navbar
+      a(href='/today') Today
+      a(href='/month') One Month Ago
+      a(href='/halfYear') Six Months Ago
+      a(href='/year') One Year Ago
+    br
+    .content
+      .box.top-song
+        .top-song-header
+          p.number-the THE
+          span.number
+            | #
+            img.number1(src='https://www.billboard.com/assets/1583359525/images/charts/number-one.svg?6af5a4550aebfa240dae', width='60px', height='120px')
+          span.number-song SONG
+        img#cover.top-song-cover
+        .top-song-details
+          .top-song-info
+            p #{topsongtitle} 
+            p #{topsongartist}
+            p #{topsongweeks} weeks on the chart
+      .box.top-vid
+        | Check out the #1 song!
+        iframe.youtubevid(width='370', height='250', src='https://www.youtube.com/embed/UNZqm3dxd2w')
+      .box.top-100
+        h4.top-100.top-100-header THE TOP 100
+        ol.top-100-listing
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #1
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details 
+              p #{top100title1}
+              p #{top100artist1}
+              p #{top100weeks1} weeks on the chart
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #2
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p #{top100title2}
+              p #{top100artist2}
+              p #{top100weeks2} weeks on the chart
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #3
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p#top-100-title.top-100-details title failed
+              p#top-100-artist.top-100-details artist failed
+              p#100-weeks-on-chart.top-100-details weeks failed
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #4
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p#top-100-title.top-100-details title failed
+              p#top-100-artist.top-100-details artist failed
+              p#100-weeks-on-chart.top-100-details weeks failed
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #5
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p#top-100-title.top-100-details title failed
+              p#top-100-artist.top-100-details artist failed
+              p#100-weeks-on-chart.top-100-details weeks failed
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #6
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p#top-100-title.top-100-details title failed
+              p#top-100-artist.top-100-details artist failed
+              p#100-weeks-on-chart.top-100-details weeks failed
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #7
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p#top-100-title.top-100-details title failed
+              p#top-100-artist.top-100-details artist failed
+              p#100-weeks-on-chart.top-100-details weeks failed
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #8
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p#top-100-title.top-100-details title failed
+              p#top-100-artist.top-100-details artist failed
+              p#100-weeks-on-chart.top-100-details weeks failed
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #9
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p#top-100-title.top-100-details title failed
+              p#top-100-artist.top-100-details artist failed
+              p#100-weeks-on-chart.top-100-details weeks failed
+          li.top-100-listing.top-100-obj
+            p.top-100-listing.top-100-number #10
+            img#top-100-cover.top-100-cover
+            .top-100-listing.top-song-details
+              p#top-100-title.top-100-details title failed
+              p#top-100-artist.top-100-details artist failed
+              p#100-weeks-on-chart.top-100-details weeks failed
+      .box.top-artists
+        h4.top-100-header HOT Artists
+        ol.top-artists-listing(style='margin-top: 50px;')
+          li.top-artists-listing.top-artists-obj 1
+          li.top-artists-listing.top-artists-obj 2
+          li.top-artists-listing.top-artists-obj 3
+          li.top-artists-listing.top-artists-obj 4
+          li.top-artists-listing.top-artists-obj 5
+          li.top-artists-listing.top-artists-obj 6
+          li.top-artists-listing.top-artists-obj 7
+          li.top-artists-listing.top-artists-obj 8
+          li.top-artists-listing.top-artists-obj 9
+          li.top-artists-listing.top-artists-obj 10
+      .box.top-albums
+        h4.top-100-header HOT Albums
+        ol.top-albums-listing
+          li.top-albums-listing.top-albums-obj 1
+          li.top-albums-listing.top-albums-obj 2
+          li.top-albums-listing.top-albums-obj 3
+          li.top-albums-listing.top-albums-obj 4
+          li.top-albums-listing.top-albums-obj 5
+          li.top-albums-listing.top-albums-obj 6
+          li.top-albums-listing.top-albums-obj 7
+          li.top-albums-listing.top-albums-obj 8
+          li.top-albums-listing.top-albums-obj 9
+          li.top-albums-listing.top-albums-obj 10
+    script(type='text/javascript').
+      $.getJSON("today.json", function(json) {
+      document.getElementById("cover").src = json[0].cover;
+      document.getElementById("title").innerHTML = json[0].title;
+      document.getElementById("artist").innerHTML = json[0].artist;
+      document.getElementById("weeks-on-chart").innerHTML = json[0].position.weeksOnChart + " weeks on chart";
+      document.getElementById("top-100-cover").src = json[0].cover;
+      document.getElementById("top-100-title").innerHTML = json[0].title;
+      document.getElementById("top-100-artist").innerHTML = json[0].artist;
+      document.getElementById("100-weeks-on-chart").innerHTML = json[0].position.weeksOnChart + " weeks on chart";
+      });
+    link(href='music-charts.css', type='text/css', rel='stylesheet')
+
+
