@@ -35,7 +35,7 @@
     exports.testfunc2 = testfunc2;
     exports.testfunc3 = testfunc3;
     exports.testfunc4 = testfunc4;
-    exports.testfunc5 = testfunc6;
+    exports.testfunc5 = testfunc5;
     exports.testfunc6 = testfunc6;
     exports.testfunc7 = testfunc7;
     exports.testfunc8 = testfunc8;
