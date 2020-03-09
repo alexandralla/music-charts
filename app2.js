@@ -37,7 +37,29 @@ app.get('/', (req, res) => {
     top100title7: seventhsong.title, top100artist7: seventhsong.artist, top100weeks7: seventhsong.position.weeksOnChart, top100image7: seventhsong.cover,
     top100title8: eigthsong.title, top100artist8: eigthsong.artist, top100weeks8: eigthsong.position.weeksOnChart, top100image8: eigthsong.cover,
     top100title9: ninthsong.title, top100artist9: ninthsong.artist, top100weeks9: ninthsong.position.weeksOnChart, top100image9: ninthsong.cover,
-    top100title10: tenthsong.title, top100artist10: tenthsong.artist, top100weeks10: tenthsong.position.weeksOnChart, top100image10: tenthsong.cover});
+    top100title10: tenthsong.title, top100artist10: tenthsong.artist, top100weeks10: tenthsong.position.weeksOnChart, top100image10: tenthsong.cover,
+    top100title11: eleventhsong.title, top100artist11: eleventhsong.artist, top100weeks11: eleventhsong.position.weeksOnChart, top100image11: eleventhsong.cover,
+    top100title12: twelfthsong.title, top100artist12: twelfthsong.artist, top100weeks12: twelfthsong.position.weeksOnChart, top100image12: twelfthsong.cover,
+    top100title13: thirteenthsong.title, top100artist13: thirteenthsong.artist, top100weeks13: thirteenthsong.position.weeksOnChart, top100image13: thirteenthsong.cover,
+    top100title14: fourteenthsong.title, top100artist14: fourteenthsong.artist, top100weeks14: fourteenthsong.position.weeksOnChart, top100image14: fourteenthsong.cover,
+    top100title15: fifteenthsong.title, top100artist15: fifteenthsong.artist, top100weeks15: fifteenthsong.position.weeksOnChart, top100image15: fifteenthsong.cover,
+    top100title16: sixteenthsong.title, top100artist16: sixteenthsong.artist, top100weeks16: sixteenthsong.position.weeksOnChart, top100image16: sixteenthsong.cover,
+    top100title17: seventeenthsong.title, top100artist17: seventeenthsong.artist, top100weeks17: seventeenthsong.position.weeksOnChart, top100image17: seventeenthsong.cover,
+    top100title18: eigthteenthsong.title, top100artist18: eigthteenthsong.artist, top100weeks18: eigthteenthsong.position.weeksOnChart, top100image18: eigthteenthsong.cover,
+    top100title19: ninteenthsong.title, top100artist19: ninteenthsong.artist, top100weeks19: ninteenthsong.position.weeksOnChart, top100image19: ninteenthsong.cover,
+    top100title20: twentiethsong.title, top100artist20: twentiethsong.artist, top100weeks20: twentiethsong.position.weeksOnChart, top100image20: twentiethsong.cover,
+    top100title21: twentyfirstsong.title, top100artist21: twentyfirstsong.artist, top100weeks21: twentyfirstsong.position.weeksOnChart, top100image21: twentyfirstsong.cover,
+    top100title22: twentysecondsong.title, top100artist22: twentysecondsong.artist, top100weeks22: twentysecondsong.position.weeksOnChart, top100image22: twentysecondsong.cover,
+    top100title23: twentythirdsong.title, top100artist23: twentythirdsong.artist, top100weeks23: twentythirdsong.position.weeksOnChart, top100image23: twentythirdsong.cover,
+    top100title24: twentyfourthsong.title, top100artist24: twentyfourthsong.artist, top100weeks24: twentyfourthsong.position.weeksOnChart, top100image24: twentyfourthsong.cover,
+    top100title25: twentyfifthsong.title, top100artist25: twentyfifthsong.artist, top100weeks25: twentyfifthsong.position.weeksOnChart, top100image25: twentyfifthsong.cover,
+    top100title26: twentysixthsong.title, top100artist26: twentysixthsong.artist, top100weeks26: twentysixthsong.position.weeksOnChart, top100image26: twentysixthsong.cover,
+    top100title27: twentyseventhsong.title, top100artist27: twentyseventhsong.artist, top100weeks27: twentyseventhsong.position.weeksOnChart, top100image27: twentyseventhsong.cover,
+    top100title28: twentyeighthsong.title, top100artist28: twentyeighthsong.artist, top100weeks28: twentyeighthsong.position.weeksOnChart, top100image28: twentyeighthsong.cover,
+    top100title29: twentyninthsong.title, top100artist29: twentyninthsong.artist, top100weeks29: twentyninthsong.position.weeksOnChart, top100image29: twentyninthsong.cover,
+    top100title30: thirtiethsong.title, top100artist30: thirtiethsong.artist, top100weeks30: thirtiethsong.position.weeksOnChart, top100image30: thirtiethsong.cover,
+
+});
     
   //console.log(`request was made: ${req.url}`);
   //res.sendFile(`${__dirname}/music-charts.html`);
@@ -235,6 +257,26 @@ fs.readFile('today.json', (err, data) => {
   eigthsong = utilities.testfunc8(chart);
   ninthsong = utilities.testfunc9(chart);
   tenthsong = utilities.testfunc10(chart);
+  eleventhsong = utilities.testfunc11(chart);
+  twelfthsong = utilities.testfunc12(chart);
+  thirteenthsong = utilities.testfunc13(chart);
+  fourteenthsong = utilities.testfunc14(chart);
+  fifteenthsong = utilities.testfunc15(chart);
+  sixteenthsong = utilities.testfunc16(chart);
+  seventeenthsong = utilities.testfunc17(chart);
+  eigthteenthsong = utilities.testfunc18(chart);
+  ninteenthsong = utilities.testfunc19(chart);
+  twentiethsong = utilities.testfunc20(chart);
+  twentyfirstsong = utilities.testfunc21(chart);
+  twentysecondsong = utilities.testfunc22(chart);
+  twentythirdsong = utilities.testfunc23(chart);
+  twentyfourthsong = utilities.testfunc24(chart);
+  twentyfifthsong = utilities.testfunc25(chart);
+  twentysixthsong = utilities.testfunc26(chart);
+  twentyseventhsong = utilities.testfunc27(chart);
+  twentyeighthsong = utilities.testfunc28(chart);
+  twentyninthsong = utilities.testfunc29(chart);
+  thirtiethsong = utilities.testfunc30(chart);
   console.log(topsong);
   console.log(secondsong);
   console.log(thirdsong);
