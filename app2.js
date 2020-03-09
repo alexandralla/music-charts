@@ -347,12 +347,112 @@ app.get('/halfYear', (req, res) => {
 
 });
 
-/*
+
 // CREATES YEAR SERVER
 app.get('/year', (req, res) => {
-  console.log(`request was made: ${req.url}`);
-  res.sendFile(`${__dirname}/music-charts.html`);
-}); */
+    res.render('music-charts', {topyearsongtitle: topyearsong.title, topyearsongartist: topyearsong.artist, topyearsongweeks: topyearsong.position.weeksOnChart, 
+        top100title1: topyearsong.title, top100artist1: topyearsong.artist, top100weeks1: topyearsong.position.weeksOnChart, top100image1: topyearsong.cover, 
+        top100title2: secondyearsong.title, top100artist2: secondyearsong.artist, top100weeks2: secondyearsong.position.weeksOnChart, top100image2: secondyearsong.cover,
+        top100title3: thirdyearsong.title, top100artist3: thirdyearsong.artist, top100weeks3: thirdyearsong.position.weeksOnChart, top100image3: thirdyearsong.cover,
+        top100title4: fourthyearsong.title, top100artist4: fourthyearsong.artist, top100weeks4: fourthyearsong.position.weeksOnChart, top100image4: fourthyearsong.cover,
+        top100title5: fifthyearsong.title, top100artist5: fifthyearsong.artist, top100weeks5: fifthyearsong.position.weeksOnChart, top100image5: fifthyearsong.cover,
+        top100title6: sixthyearsong.title, top100artist6: sixthyearsong.artist, top100weeks6: sixthyearsong.position.weeksOnChart, top100image6: sixthyearsong.cover,
+        top100title7: seventhyearsong.title, top100artist7: seventhyearsong.artist, top100weeks7: seventhyearsong.position.weeksOnChart, top100image7: seventhyearsong.cover,
+        top100title8: eigthyearsong.title, top100artist8: eigthyearsong.artist, top100weeks8: eigthyearsong.position.weeksOnChart, top100image8: eigthyearsong.cover,
+        top100title9: ninthyearsong.title, top100artist9: ninthyearsong.artist, top100weeks9: ninthyearsong.position.weeksOnChart, top100image9: ninthyearsong.cover,
+        top100title10: tenthyearsong.title, top100artist10: tenthyearsong.artist, top100weeks10: tenthyearsong.position.weeksOnChart, top100image10: tenthyearsong.cover,
+        top100title11: eleventhyearsong.title, top100artist11: eleventhyearsong.artist, top100weeks11: eleventhyearsong.position.weeksOnChart, top100image11: eleventhyearsong.cover,
+        top100title12: twelfthyearsong.title, top100artist12: twelfthyearsong.artist, top100weeks12: twelfthyearsong.position.weeksOnChart, top100image12: twelfthyearsong.cover,
+        top100title13: thirteenthyearsong.title, top100artist13: thirteenthyearsong.artist, top100weeks13: thirteenthyearsong.position.weeksOnChart, top100image13: thirteenthyearsong.cover,
+        top100title14: fourteenthyearsong.title, top100artist14: fourteenthyearsong.artist, top100weeks14: fourteenthyearsong.position.weeksOnChart, top100image14: fourteenthyearsong.cover,
+        top100title15: fifteenthyearsong.title, top100artist15: fifteenthyearsong.artist, top100weeks15: fifteenthyearsong.position.weeksOnChart, top100image15: fifteenthyearsong.cover,
+        top100title16: sixteenthyearsong.title, top100artist16: sixteenthyearsong.artist, top100weeks16: sixteenthyearsong.position.weeksOnChart, top100image16: sixteenthyearsong.cover,
+        top100title17: seventeenthyearsong.title, top100artist17: seventeenthyearsong.artist, top100weeks17: seventeenthyearsong.position.weeksOnChart, top100image17: seventeenthyearsong.cover,
+        top100title18: eigthteenthyearsong.title, top100artist18: eigthteenthyearsong.artist, top100weeks18: eigthteenthyearsong.position.weeksOnChart, top100image18: eigthteenthyearsong.cover,
+        top100title19: ninteenthyearsong.title, top100artist19: ninteenthyearsong.artist, top100weeks19: ninteenthyearsong.position.weeksOnChart, top100image19: ninteenthyearsong.cover,
+        top100title20: twentiethyearsong.title, top100artist20: twentiethyearsong.artist, top100weeks20: twentiethyearsong.position.weeksOnChart, top100image20: twentiethyearsong.cover,
+        top100title21: twentyfirstyearsong.title, top100artist21: twentyfirstyearsong.artist, top100weeks21: twentyfirstyearsong.position.weeksOnChart, top100image21: twentyfirstyearsong.cover,
+        top100title22: twentysecondyearsong.title, top100artist22: twentysecondyearsong.artist, top100weeks22: twentysecondyearsong.position.weeksOnChart, top100image22: twentysecondyearsong.cover,
+        top100title23: twentythirdyearsong.title, top100artist23: twentythirdyearsong.artist, top100weeks23: twentythirdyearsong.position.weeksOnChart, top100image23: twentythirdyearsong.cover,
+        top100title24: twentyfourthyearsong.title, top100artist24: twentyfourthyearsong.artist, top100weeks24: twentyfourthyearsong.position.weeksOnChart, top100image24: twentyfourthyearsong.cover,
+        top100title25: twentyfifthyearsong.title, top100artist25: twentyfifthyearsong.artist, top100weeks25: twentyfifthyearsong.position.weeksOnChart, top100image25: twentyfifthyearsong.cover,
+        top100title26: twentysixthyearsong.title, top100artist26: twentysixthyearsong.artist, top100weeks26: twentysixthyearsong.position.weeksOnChart, top100image26: twentysixthyearsong.cover,
+        top100title27: twentyseventhyearsong.title, top100artist27: twentyseventhyearsong.artist, top100weeks27: twentyseventhyearsong.position.weeksOnChart, top100image27: twentyseventhyearsong.cover,
+        top100title28: twentyeighthyearsong.title, top100artist28: twentyeighthyearsong.artist, top100weeks28: twentyeighthyearsong.position.weeksOnChart, top100image28: twentyeighthyearsong.cover,
+        top100title29: twentyninthyearsong.title, top100artist29: twentyninthyearsong.artist, top100weeks29: twentyninthyearsong.position.weeksOnChart, top100image29: twentyninthyearsong.cover,
+        top100title30: thirtiethyearsong.title, top100artist30: thirtiethyearsong.artist, top100weeks30: thirtiethyearsong.position.weeksOnChart, top100image30: thirtiethyearsong.cover,
+        top100title31: thirtiefirstyearsong.title, top100artist31: thirtiefirstyearsong.artist, top100weeks31: thirtiefirstyearsong.position.weeksOnChart, top100image31: thirtiefirstyearsong.cover,
+        top100title32: thirtiesecondyearsong.title, top100artist32: thirtiesecondyearsong.artist, top100weeks32: thirtiesecondyearsong.position.weeksOnChart, top100image32: thirtiesecondyearsong.cover,
+        top100title33: thirtiethirdyearsong.title, top100artist33: thirtiethirdyearsong.artist, top100weeks33: thirtiethirdyearsong.position.weeksOnChart, top100image33: thirtiethirdyearsong.cover,
+        top100title34: thirtiefourthyearsong.title, top100artist34: thirtiefourthyearsong.artist, top100weeks34: thirtiefourthyearsong.position.weeksOnChart, top100image34: thirtiefourthyearsong.cover,
+        top100title35: thirtiefifthyearsong.title, top100artist35: thirtiefifthyearsong.artist, top100weeks35: thirtiefifthyearsong.position.weeksOnChart, top100image35: thirtiefifthyearsong.cover,
+        top100title36: thirtiesixthyearsong.title, top100artist36: thirtiesixthyearsong.artist, top100weeks36: thirtiesixthyearsong.position.weeksOnChart, top100image36: thirtiesixthyearsong.cover,
+        top100title37: thirtieseventhyearsong.title, top100artist37: thirtieseventhyearsong.artist, top100weeks37: thirtieseventhyearsong.position.weeksOnChart, top100image37: thirtieseventhyearsong.cover,
+        top100title38: thirtieeighthyearsong.title, top100artist38: thirtieeighthyearsong.artist, top100weeks38: thirtieeighthyearsong.position.weeksOnChart, top100image38: thirtieeighthyearsong.cover,
+        top100title39: thirtieninthyearsong.title, top100artist39: thirtieninthyearsong.artist, top100weeks39: thirtieninthyearsong.position.weeksOnChart, top100image39: thirtieninthyearsong.cover,
+        top100title40: fortiethyearsong.title, top100artist40: fortiethyearsong.artist, top100weeks40: fortiethyearsong.position.weeksOnChart, top100image40: fortiethyearsong.cover,
+        top100title41: fortyfirstyearsong.title, top100artist41: fortyfirstyearsong.artist, top100weeks41: fortyfirstyearsong.position.weeksOnChart, top100image41: fortyfirstyearsong.cover,
+        top100title42: fortysecondyearsong.title, top100artist42: fortysecondyearsong.artist, top100weeks42: fortysecondyearsong.position.weeksOnChart, top100image42: fortysecondyearsong.cover,
+        top100title43: fortythirdyearsong.title, top100artist43: fortythirdyearsong.artist, top100weeks43: fortythirdyearsong.position.weeksOnChart, top100image43: fortythirdyearsong.cover,
+        top100title44: fortyfourthyearsong.title, top100artist44: fortyfourthyearsong.artist, top100weeks44: fortyfourthyearsong.position.weeksOnChart, top100image44: fortyfourthyearsong.cover,
+        top100title45: fortyfifthyearsong.title, top100artist45: fortyfifthyearsong.artist, top100weeks45: fortyfifthyearsong.position.weeksOnChart, top100image45: fortyfifthyearsong.cover,
+        top100title46: fortysixthyearsong.title, top100artist46: fortysixthyearsong.artist, top100weeks46: fortysixthyearsong.position.weeksOnChart, top100image46: fortysixthyearsong.cover,
+        top100title47: fortyseventhyearsong.title, top100artist47: fortyseventhyearsong.artist, top100weeks47: fortyseventhyearsong.position.weeksOnChart, top100image47: fortyseventhyearsong.cover,
+        top100title48: fortyeighthyearsong.title, top100artist48: fortyeighthyearsong.artist, top100weeks48: fortyeighthyearsong.position.weeksOnChart, top100image48: fortyeighthyearsong.cover,
+        top100title49: fortyninthyearsong.title, top100artist49: fortyninthyearsong.artist, top100weeks49: fortyninthyearsong.position.weeksOnChart, top100image49: fortyninthyearsong.cover,
+        top100title50: fiftythyearsong.title, top100artist50: fiftythyearsong.artist, top100weeks50: fiftythyearsong.position.weeksOnChart, top100image50: fiftythyearsong.cover,
+        top100title51: fiftyfirstyearsong.title, top100artist51: fiftyfirstyearsong.artist, top100weeks51: fiftyfirstyearsong.position.weeksOnChart, top100image51: fiftyfirstyearsong.cover,
+        top100title52: fiftysecondyearsong.title, top100artist52: fiftysecondyearsong.artist, top100weeks52: fiftysecondyearsong.position.weeksOnChart, top100image52: fiftysecondyearsong.cover,
+        top100title53: fiftythirdyearsong.title, top100artist53: fiftythirdyearsong.artist, top100weeks53: fiftythirdyearsong.position.weeksOnChart, top100image53: fiftythirdyearsong.cover,
+        top100title54: fiftyfourthyearsong.title, top100artist54: fiftyfourthyearsong.artist, top100weeks54: fiftyfourthyearsong.position.weeksOnChart, top100image54: fiftyfourthyearsong.cover,
+        top100title55: fiftyfifthyearsong.title, top100artist55: fiftyfifthyearsong.artist, top100weeks55: fiftyfifthyearsong.position.weeksOnChart, top100image55: fiftyfifthyearsong.cover,
+        top100title56: fiftysixthyearsong.title, top100artist56: fiftysixthyearsong.artist, top100weeks56: fiftysixthyearsong.position.weeksOnChart, top100image56: fiftysixthyearsong.cover,
+        top100title57: fiftyseventhyearsong.title, top100artist57: fiftyseventhyearsong.artist, top100weeks57: fiftyseventhyearsong.position.weeksOnChart, top100image57: fiftyseventhyearsong.cover,
+        top100title58: fiftyeighthyearsong.title, top100artist58: fiftyeighthyearsong.artist, top100weeks58: fiftyeighthyearsong.position.weeksOnChart, top100image58: fiftyeighthyearsong.cover,
+        top100title59: fiftyninthyearsong.title, top100artist59: fiftyninthyearsong.artist, top100weeks59: fiftyninthyearsong.position.weeksOnChart, top100image59: fiftyninthyearsong.cover,
+        top100title60: sixtythyearsong.title, top100artist60: sixtythyearsong.artist, top100weeks60: sixtythyearsong.position.weeksOnChart, top100image60: sixtythyearsong.cover,
+        top100title61: sixtyfirstyearsong.title, top100artist61: sixtyfirstyearsong.artist, top100weeks61: sixtyfirstyearsong.position.weeksOnChart, top100image61: sixtyfirstyearsong.cover,
+        top100title62: sixtysecondyearsong.title, top100artist62: sixtysecondyearsong.artist, top100weeks62: sixtysecondyearsong.position.weeksOnChart, top100image62: sixtysecondyearsong.cover,
+        top100title63: sixtythirdyearsong.title, top100artist63: sixtythirdyearsong.artist, top100weeks63: sixtythirdyearsong.position.weeksOnChart, top100image63: sixtythirdyearsong.cover,
+        top100title64: sixtyfourthyearsong.title, top100artist64: sixtyfourthyearsong.artist, top100weeks64: sixtyfourthyearsong.position.weeksOnChart, top100image64: sixtyfourthyearsong.cover,
+        top100title65: sixtyfifthyearsong.title, top100artist65: sixtyfifthyearsong.artist, top100weeks65: sixtyfifthyearsong.position.weeksOnChart, top100image65: sixtyfifthyearsong.cover,
+        top100title66: sixtysixthyearsong.title, top100artist66: sixtysixthyearsong.artist, top100weeks66: sixtysixthyearsong.position.weeksOnChart, top100image66: sixtysixthyearsong.cover,
+        top100title67: sixtyseventhyearsong.title, top100artist67: sixtyseventhyearsong.artist, top100weeks67: sixtyseventhyearsong.position.weeksOnChart, top100image67: sixtyseventhyearsong.cover,
+        top100title68: sixtyeighthyearsong.title, top100artist68: sixtyeighthyearsong.artist, top100weeks68: sixtyeighthyearsong.position.weeksOnChart, top100image68: sixtyeighthyearsong.cover,
+        top100title69: sixtyninthyearsong.title, top100artist69: sixtyninthyearsong.artist, top100weeks69: sixtyninthyearsong.position.weeksOnChart, top100image69: sixtyninthyearsong.cover,
+        top100title70: seventythyearsong.title, top100artist70: seventythyearsong.artist, top100weeks70: seventythyearsong.position.weeksOnChart, top100image70: seventythyearsong.cover,
+        top100title71: seventyfirstyearsong.title, top100artist71: seventyfirstyearsong.artist, top100weeks71: seventyfirstyearsong.position.weeksOnChart, top100image71: seventyfirstyearsong.cover,
+        top100title72: seventysecondyearsong.title, top100artist72: seventysecondyearsong.artist, top100weeks72: seventysecondyearsong.position.weeksOnChart, top100image72: seventysecondyearsong.cover,
+        top100title73: seventythirdyearsong.title, top100artist73: seventythirdyearsong.artist, top100weeks73: seventythirdyearsong.position.weeksOnChart, top100image73: seventythirdyearsong.cover,
+        top100title74: seventyfourthyearsong.title, top100artist74: seventyfourthyearsong.artist, top100weeks74: seventyfourthyearsong.position.weeksOnChart, top100image74: seventyfourthyearsong.cover,
+        top100title75: seventyfifthyearsong.title, top100artist75: seventyfifthyearsong.artist, top100weeks75: seventyfifthyearsong.position.weeksOnChart, top100image75: seventyfifthyearsong.cover,
+        top100title76: seventysixthyearsong.title, top100artist76: seventysixthyearsong.artist, top100weeks76: seventysixthyearsong.position.weeksOnChart, top100image76: seventysixthyearsong.cover,
+        top100title77: seventyseventhyearsong.title, top100artist77: seventyseventhyearsong.artist, top100weeks77: seventyseventhyearsong.position.weeksOnChart, top100image77: seventyseventhyearsong.cover,
+        top100title78: seventyeighthyearsong.title, top100artist78: seventyeighthyearsong.artist, top100weeks78: seventyeighthyearsong.position.weeksOnChart, top100image78: seventyeighthyearsong.cover,
+        top100title79: seventyninthyearsong.title, top100artist79: seventyninthyearsong.artist, top100weeks79: seventyninthyearsong.position.weeksOnChart, top100image79: seventyninthyearsong.cover,
+        top100title80: eightythyearsong.title, top100artist80: eightythyearsong.artist, top100weeks80: eightythyearsong.position.weeksOnChart, top100image80: eightythyearsong.cover,
+        top100title81: eightyfirstyearsong.title, top100artist81: eightyfirstyearsong.artist, top100weeks81: eightyfirstyearsong.position.weeksOnChart, top100image81: eightyfirstyearsong.cover,
+        top100title82: eightysecondyearsong.title, top100artist82: eightysecondyearsong.artist, top100weeks82: eightysecondyearsong.position.weeksOnChart, top100image82: eightysecondyearsong.cover,
+        top100title83: eightythirdyearsong.title, top100artist83: eightythirdyearsong.artist, top100weeks83: eightythirdyearsong.position.weeksOnChart, top100image83: eightythirdyearsong.cover,
+        top100title84: eightyfourthyearsong.title, top100artist84: eightyfourthyearsong.artist, top100weeks84: eightyfourthyearsong.position.weeksOnChart, top100image84: eightyfourthyearsong.cover,
+        top100title85: eightyfifthyearsong.title, top100artist85: eightyfifthyearsong.artist, top100weeks85: eightyfifthyearsong.position.weeksOnChart, top100image85: eightyfifthyearsong.cover,
+        top100title86: eightysixthyearsong.title, top100artist86: eightysixthyearsong.artist, top100weeks86: eightysixthyearsong.position.weeksOnChart, top100image86: eightysixthyearsong.cover,
+        top100title87: eightyseventhyearsong.title, top100artist87: eightyseventhyearsong.artist, top100weeks87: eightyseventhyearsong.position.weeksOnChart, top100image87: eightyseventhyearsong.cover,
+        top100title88: eightyeighthyearsong.title, top100artist88: eightyeighthyearsong.artist, top100weeks88: eightyeighthyearsong.position.weeksOnChart, top100image88: eightyeighthyearsong.cover,
+        top100title89: eightyninthyearsong.title, top100artist89: eightyninthyearsong.artist, top100weeks89: eightyninthyearsong.position.weeksOnChart, top100image89: eightyninthyearsong.cover,
+        top100title90: nintythyearsong.title, top100artist90: nintythyearsong.artist, top100weeks90: nintythyearsong.position.weeksOnChart, top100image90: nintythyearsong.cover,
+        top100title91: nintyfirstyearsong.title, top100artist91: nintyfirstyearsong.artist, top100weeks91: nintyfirstyearsong.position.weeksOnChart, top100image91: nintyfirstyearsong.cover,
+        top100title92: nintysecondyearsong.title, top100artist92: nintysecondyearsong.artist, top100weeks92: nintysecondyearsong.position.weeksOnChart, top100image92: nintysecondyearsong.cover,
+        top100title93: nintythirdyearsong.title, top100artist93: nintythirdyearsong.artist, top100weeks93: nintythirdyearsong.position.weeksOnChart, top100image93: nintythirdyearsong.cover,
+        top100title94: nintyfourthyearsong.title, top100artist94: nintyfourthyearsong.artist, top100weeks94: nintyfourthyearsong.position.weeksOnChart, top100image94: nintyfourthyearsong.cover,
+        top100title95: nintyfifthyearsong.title, top100artist95: nintyfifthyearsong.artist, top100weeks95: nintyfifthyearsong.position.weeksOnChart, top100image95: nintyfifthyearsong.cover,
+        top100title96: nintysixthyearsong.title, top100artist96: nintysixthyearsong.artist, top100weeks96: nintysixthyearsong.position.weeksOnChart, top100image96: nintysixthyearsong.cover,
+        top100title97: nintyseventhyearsong.title, top100artist97: nintyseventhyearsong.artist, top100weeks97: nintyseventhyearsong.position.weeksOnChart, top100image97: nintyseventhyearsong.cover,
+        top100title98: nintyeighthyearsong.title, top100artist98: nintyeighthyearsong.artist, top100weeks98: nintyeighthyearsong.position.weeksOnChart, top100image98: nintyeighthyearsong.cover,
+        top100title99: nintyninthyearsong.title, top100artist99: nintyninthyearsong.artist, top100weeks99: nintyninthyearsong.position.weeksOnChart, top100image99: nintyninthyearsong.cover,
+        top100title100: onehundredthyearsong.title, top100artist100: onehundredthyearsong.artist, top100weeks100: onehundredthyearsong.position.weeksOnChart, top100image100: onehundredthyearsong.cover,
+        });
+}); 
 
 // CREATE TODAY JSON
 getChart('hot-100', (err, chart) => {
@@ -500,7 +600,7 @@ getChart('top-album-sales', (err, chart) => {
 */
 
 // CREATE MONTH JSON
-monthDate = getDate(30);
+monthDate = getDate(60);
 getChart('hot-100', monthDate, (err, chart) => {
   if (err) console.log(err);
   const data = JSON.stringify(chart.songs, null, 2);
@@ -789,6 +889,7 @@ getChart('top-album-sales', halfYearDate, (err, chart) => {
   console.log('half-year-albums.json was created!');
 });
 
+*/
 // CREATE YEAR JSON
 yearDate = getDate(365);
 getChart('hot-100', yearDate, (err, chart) => {
@@ -800,8 +901,115 @@ getChart('hot-100', yearDate, (err, chart) => {
     }
   });
   console.log('year.json was created!');
+
+  fs.readFile('year.json', (err, data) => {
+    console.log("IN READFILE");
+    if (err) throw err;
+    let chart = JSON.parse(data);
+    topyearsong = utilities.testfunc(chart);
+    secondyearsong = utilities.testfunc2(chart);
+    thirdyearsong = utilities.testfunc3(chart);
+    fourthyearsong = utilities.testfunc4(chart);
+    fifthyearsong = utilities.testfunc5(chart);
+    sixthyearsong = utilities.testfunc6(chart);
+    seventhyearsong = utilities.testfunc7(chart);
+    eigthyearsong = utilities.testfunc8(chart);
+    ninthyearsong = utilities.testfunc9(chart);
+    tenthyearsong = utilities.testfunc10(chart);
+    eleventhyearsong = utilities.testfunc11(chart);
+    twelfthyearsong = utilities.testfunc12(chart);
+    thirteenthyearsong = utilities.testfunc13(chart);
+    fourteenthyearsong = utilities.testfunc14(chart);
+    fifteenthyearsong = utilities.testfunc15(chart);
+    sixteenthyearsong = utilities.testfunc16(chart);
+    seventeenthyearsong = utilities.testfunc17(chart);
+    eigthteenthyearsong = utilities.testfunc18(chart);
+    ninteenthyearsong = utilities.testfunc19(chart);
+    twentiethyearsong = utilities.testfunc20(chart);
+    twentyfirstyearsong = utilities.testfunc21(chart);
+    twentysecondyearsong = utilities.testfunc22(chart);
+    twentythirdyearsong = utilities.testfunc23(chart);
+    twentyfourthyearsong = utilities.testfunc24(chart);
+    twentyfifthyearsong = utilities.testfunc25(chart);
+    twentysixthyearsong = utilities.testfunc26(chart);
+    twentyseventhyearsong = utilities.testfunc27(chart);
+    twentyeighthyearsong = utilities.testfunc28(chart);
+    twentyninthyearsong = utilities.testfunc29(chart);
+    thirtiethyearsong = utilities.testfunc30(chart);
+    thirtiefirstyearsong = utilities.testfunc31(chart);
+    thirtiesecondyearsong = utilities.testfunc32(chart);
+    thirtiethirdyearsong = utilities.testfunc33(chart);
+    thirtiefourthyearsong = utilities.testfunc34(chart);
+    thirtiefifthyearsong = utilities.testfunc35(chart);
+    thirtiesixthyearsong = utilities.testfunc36(chart);
+    thirtieseventhyearsong = utilities.testfunc37(chart);
+    thirtieeighthyearsong = utilities.testfunc38(chart);
+    thirtieninthyearsong = utilities.testfunc39(chart);
+    fortiethyearsong = utilities.testfunc40(chart);
+    fortyfirstyearsong = utilities.testfunc41(chart);
+    fortysecondyearsong = utilities.testfunc42(chart);
+    fortythirdyearsong = utilities.testfunc43(chart);
+    fortyfourthyearsong = utilities.testfunc44(chart);
+    fortyfifthyearsong = utilities.testfunc45(chart);
+    fortysixthyearsong = utilities.testfunc46(chart);
+    fortyseventhyearsong = utilities.testfunc47(chart);
+    fortyeighthyearsong = utilities.testfunc48(chart);
+    fortyninthyearsong = utilities.testfunc49(chart);
+    fiftythyearsong = utilities.testfunc50(chart);
+    fiftyfirstyearsong = utilities.testfunc51(chart);
+    fiftysecondyearsong = utilities.testfunc52(chart);
+    fiftythirdyearsong = utilities.testfunc53(chart);
+    fiftyfourthyearsong = utilities.testfunc54(chart);
+    fiftyfifthyearsong = utilities.testfunc55(chart);
+    fiftysixthyearsong = utilities.testfunc56(chart);
+    fiftyseventhyearsong = utilities.testfunc57(chart);
+    fiftyeighthyearsong = utilities.testfunc58(chart);
+    fiftyninthyearsong = utilities.testfunc59(chart);
+    sixtythyearsong = utilities.testfunc60(chart);
+    sixtyfirstyearsong = utilities.testfunc61(chart);
+    sixtysecondyearsong = utilities.testfunc62(chart);
+    sixtythirdyearsong = utilities.testfunc63(chart);
+    sixtyfourthyearsong = utilities.testfunc64(chart);
+    sixtyfifthyearsong = utilities.testfunc65(chart);
+    sixtysixthyearsong = utilities.testfunc66(chart);
+    sixtyseventhyearsong = utilities.testfunc67(chart);
+    sixtyeighthyearsong = utilities.testfunc68(chart);
+    sixtyninthyearsong = utilities.testfunc69(chart);
+    seventythyearsong = utilities.testfunc60(chart);
+    seventyfirstyearsong = utilities.testfunc71(chart);
+    seventysecondyearsong = utilities.testfunc72(chart);
+    seventythirdyearsong = utilities.testfunc73(chart);
+    seventyfourthyearsong = utilities.testfunc74(chart);
+    seventyfifthyearsong = utilities.testfunc75(chart);
+    seventysixthyearsong = utilities.testfunc76(chart);
+    seventyseventhyearsong = utilities.testfunc77(chart);
+    seventyeighthyearsong = utilities.testfunc78(chart);
+    seventyninthyearsong = utilities.testfunc79(chart);
+    eightythyearsong = utilities.testfunc80(chart);
+    eightyfirstyearsong = utilities.testfunc81(chart);
+    eightysecondyearsong = utilities.testfunc82(chart);
+    eightythirdyearsong = utilities.testfunc83(chart);
+    eightyfourthyearsong = utilities.testfunc84(chart);
+    eightyfifthyearsong = utilities.testfunc85(chart);
+    eightysixthyearsong = utilities.testfunc86(chart);
+    eightyseventhyearsong = utilities.testfunc87(chart);
+    eightyeighthyearsong = utilities.testfunc88(chart);
+    eightyninthyearsong = utilities.testfunc89(chart);
+    nintythyearsong = utilities.testfunc90(chart);
+    nintyfirstyearsong = utilities.testfunc91(chart);
+    nintysecondyearsong = utilities.testfunc92(chart);
+    nintythirdyearsong = utilities.testfunc93(chart);
+    nintyfourthyearsong = utilities.testfunc94(chart);
+    nintyfifthyearsong = utilities.testfunc95(chart);
+    nintysixthyearsong = utilities.testfunc96(chart);
+    nintyseventhyearsong = utilities.testfunc97(chart);
+    nintyeighthyearsong = utilities.testfunc98(chart);
+    nintyninthyearsong = utilities.testfunc99(chart);
+    onehundredthyearsong = utilities.testfunc100(chart);
+  });
 });
 
+/*
 // CREATE YEAR ARTISTS JSON
 getChart('artist-100', yearDate, (err, chart) => {
   if (err) console.log(err);
