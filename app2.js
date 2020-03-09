@@ -128,25 +128,118 @@ app.get('/', (req, res) => {
     top100title98: nintyeighthsong.title, top100artist98: nintyeighthsong.artist, top100weeks98: nintyeighthsong.position.weeksOnChart, top100image98: nintyeighthsong.cover,
     top100title99: nintyninthsong.title, top100artist99: nintyninthsong.artist, top100weeks99: nintyninthsong.position.weeksOnChart, top100image99: nintyninthsong.cover,
     top100title100: onehundredthsong.title, top100artist100: onehundredthsong.artist, top100weeks100: onehundredthsong.position.weeksOnChart, top100image100: onehundredthsong.cover,
-});
-    
-  //console.log(`request was made: ${req.url}`);
-  //res.sendFile(`${__dirname}/music-charts.html`);
+    });
+
 });
 
-// CREATES TODAY SERVER
-app.get('/today', (req, res) => {
-  res.render('music-charts', {title: 'Roddy Richhhh'})
-  //console.log(`request was made: ${req.url}`);
-  //res.sendFile(`${__dirname}/music-charts.html`);
-});
-/* 
+
 // CREATES MONTH SERVER
 app.get('/month', (req, res) => {
-  console.log(`request was made: ${req.url}`);
-  res.sendFile(`${__dirname}/music-charts.html`);
+    res.render('music-charts', {topmonthsongtitle: topmonthsong.title, topmonthsongartist: topmonthsong.artist, topmonthsongweeks: topmonthsong.position.weeksOnChart, 
+        top100title1: topmonthsong.title, top100artist1: topmonthsong.artist, top100weeks1: topmonthsong.position.weeksOnChart, top100image1: topmonthsong.cover, 
+        top100title2: secondmonthsong.title, top100artist2: secondmonthsong.artist, top100weeks2: secondmonthsong.position.weeksOnChart, top100image2: secondmonthsong.cover,
+        top100title3: thirdmonthsong.title, top100artist3: thirdmonthsong.artist, top100weeks3: thirdmonthsong.position.weeksOnChart, top100image3: thirdmonthsong.cover,
+        top100title4: fourthmonthsong.title, top100artist4: fourthmonthsong.artist, top100weeks4: fourthmonthsong.position.weeksOnChart, top100image4: fourthmonthsong.cover,
+        top100title5: fifthmonthsong.title, top100artist5: fifthmonthsong.artist, top100weeks5: fifthmonthsong.position.weeksOnChart, top100image5: fifthmonthsong.cover,
+        top100title6: sixthmonthsong.title, top100artist6: sixthmonthsong.artist, top100weeks6: sixthmonthsong.position.weeksOnChart, top100image6: sixthmonthsong.cover,
+        top100title7: seventhmonthsong.title, top100artist7: seventhmonthsong.artist, top100weeks7: seventhmonthsong.position.weeksOnChart, top100image7: seventhmonthsong.cover,
+        top100title8: eigthmonthsong.title, top100artist8: eigthmonthsong.artist, top100weeks8: eigthmonthsong.position.weeksOnChart, top100image8: eigthmonthsong.cover,
+        top100title9: ninthmonthsong.title, top100artist9: ninthmonthsong.artist, top100weeks9: ninthmonthsong.position.weeksOnChart, top100image9: ninthmonthsong.cover,
+        top100title10: tenthmonthsong.title, top100artist10: tenthmonthsong.artist, top100weeks10: tenthmonthsong.position.weeksOnChart, top100image10: tenthmonthsong.cover,
+        top100title11: eleventhmonthsong.title, top100artist11: eleventhmonthsong.artist, top100weeks11: eleventhmonthsong.position.weeksOnChart, top100image11: eleventhmonthsong.cover,
+        top100title12: twelfthmonthsong.title, top100artist12: twelfthmonthsong.artist, top100weeks12: twelfthmonthsong.position.weeksOnChart, top100image12: twelfthmonthsong.cover,
+        top100title13: thirteenthmonthsong.title, top100artist13: thirteenthmonthsong.artist, top100weeks13: thirteenthmonthsong.position.weeksOnChart, top100image13: thirteenthmonthsong.cover,
+        top100title14: fourteenthmonthsong.title, top100artist14: fourteenthmonthsong.artist, top100weeks14: fourteenthmonthsong.position.weeksOnChart, top100image14: fourteenthmonthsong.cover,
+        top100title15: fifteenthmonthsong.title, top100artist15: fifteenthmonthsong.artist, top100weeks15: fifteenthmonthsong.position.weeksOnChart, top100image15: fifteenthmonthsong.cover,
+        top100title16: sixteenthmonthsong.title, top100artist16: sixteenthmonthsong.artist, top100weeks16: sixteenthmonthsong.position.weeksOnChart, top100image16: sixteenthmonthsong.cover,
+        top100title17: seventeenthmonthsong.title, top100artist17: seventeenthmonthsong.artist, top100weeks17: seventeenthmonthsong.position.weeksOnChart, top100image17: seventeenthmonthsong.cover,
+        top100title18: eigthteenthmonthsong.title, top100artist18: eigthteenthmonthsong.artist, top100weeks18: eigthteenthmonthsong.position.weeksOnChart, top100image18: eigthteenthmonthsong.cover,
+        top100title19: ninteenthmonthsong.title, top100artist19: ninteenthmonthsong.artist, top100weeks19: ninteenthmonthsong.position.weeksOnChart, top100image19: ninteenthmonthsong.cover,
+        top100title20: twentiethmonthsong.title, top100artist20: twentiethmonthsong.artist, top100weeks20: twentiethmonthsong.position.weeksOnChart, top100image20: twentiethmonthsong.cover,
+        top100title21: twentyfirstmonthsong.title, top100artist21: twentyfirstmonthsong.artist, top100weeks21: twentyfirstmonthsong.position.weeksOnChart, top100image21: twentyfirstmonthsong.cover,
+        top100title22: twentysecondmonthsong.title, top100artist22: twentysecondmonthsong.artist, top100weeks22: twentysecondmonthsong.position.weeksOnChart, top100image22: twentysecondmonthsong.cover,
+        top100title23: twentythirdmonthsong.title, top100artist23: twentythirdmonthsong.artist, top100weeks23: twentythirdmonthsong.position.weeksOnChart, top100image23: twentythirdmonthsong.cover,
+        top100title24: twentyfourthmonthsong.title, top100artist24: twentyfourthmonthsong.artist, top100weeks24: twentyfourthmonthsong.position.weeksOnChart, top100image24: twentyfourthmonthsong.cover,
+        top100title25: twentyfifthmonthsong.title, top100artist25: twentyfifthmonthsong.artist, top100weeks25: twentyfifthmonthsong.position.weeksOnChart, top100image25: twentyfifthmonthsong.cover,
+        top100title26: twentysixthmonthsong.title, top100artist26: twentysixthmonthsong.artist, top100weeks26: twentysixthmonthsong.position.weeksOnChart, top100image26: twentysixthmonthsong.cover,
+        top100title27: twentyseventhmonthsong.title, top100artist27: twentyseventhmonthsong.artist, top100weeks27: twentyseventhmonthsong.position.weeksOnChart, top100image27: twentyseventhmonthsong.cover,
+        top100title28: twentyeighthmonthsong.title, top100artist28: twentyeighthmonthsong.artist, top100weeks28: twentyeighthmonthsong.position.weeksOnChart, top100image28: twentyeighthmonthsong.cover,
+        top100title29: twentyninthmonthsong.title, top100artist29: twentyninthmonthsong.artist, top100weeks29: twentyninthmonthsong.position.weeksOnChart, top100image29: twentyninthmonthsong.cover,
+        top100title30: thirtiethmonthsong.title, top100artist30: thirtiethmonthsong.artist, top100weeks30: thirtiethmonthsong.position.weeksOnChart, top100image30: thirtiethmonthsong.cover,
+        top100title31: thirtiefirstmonthsong.title, top100artist31: thirtiefirstmonthsong.artist, top100weeks31: thirtiefirstmonthsong.position.weeksOnChart, top100image31: thirtiefirstmonthsong.cover,
+        top100title32: thirtiesecondmonthsong.title, top100artist32: thirtiesecondmonthsong.artist, top100weeks32: thirtiesecondmonthsong.position.weeksOnChart, top100image32: thirtiesecondmonthsong.cover,
+        top100title33: thirtiethirdmonthsong.title, top100artist33: thirtiethirdmonthsong.artist, top100weeks33: thirtiethirdmonthsong.position.weeksOnChart, top100image33: thirtiethirdmonthsong.cover,
+        top100title34: thirtiefourthmonthsong.title, top100artist34: thirtiefourthmonthsong.artist, top100weeks34: thirtiefourthmonthsong.position.weeksOnChart, top100image34: thirtiefourthmonthsong.cover,
+        top100title35: thirtiefifthmonthsong.title, top100artist35: thirtiefifthmonthsong.artist, top100weeks35: thirtiefifthmonthsong.position.weeksOnChart, top100image35: thirtiefifthmonthsong.cover,
+        top100title36: thirtiesixthmonthsong.title, top100artist36: thirtiesixthmonthsong.artist, top100weeks36: thirtiesixthmonthsong.position.weeksOnChart, top100image36: thirtiesixthmonthsong.cover,
+        top100title37: thirtieseventhmonthsong.title, top100artist37: thirtieseventhmonthsong.artist, top100weeks37: thirtieseventhmonthsong.position.weeksOnChart, top100image37: thirtieseventhmonthsong.cover,
+        top100title38: thirtieeighthmonthsong.title, top100artist38: thirtieeighthmonthsong.artist, top100weeks38: thirtieeighthmonthsong.position.weeksOnChart, top100image38: thirtieeighthmonthsong.cover,
+        top100title39: thirtieninthmonthsong.title, top100artist39: thirtieninthmonthsong.artist, top100weeks39: thirtieninthmonthsong.position.weeksOnChart, top100image39: thirtieninthmonthsong.cover,
+        top100title40: fortiethmonthsong.title, top100artist40: fortiethmonthsong.artist, top100weeks40: fortiethmonthsong.position.weeksOnChart, top100image40: fortiethmonthsong.cover,
+        top100title41: fortyfirstmonthsong.title, top100artist41: fortyfirstmonthsong.artist, top100weeks41: fortyfirstmonthsong.position.weeksOnChart, top100image41: fortyfirstmonthsong.cover,
+        top100title42: fortysecondmonthsong.title, top100artist42: fortysecondmonthsong.artist, top100weeks42: fortysecondmonthsong.position.weeksOnChart, top100image42: fortysecondmonthsong.cover,
+        top100title43: fortythirdmonthsong.title, top100artist43: fortythirdmonthsong.artist, top100weeks43: fortythirdmonthsong.position.weeksOnChart, top100image43: fortythirdmonthsong.cover,
+        top100title44: fortyfourthmonthsong.title, top100artist44: fortyfourthmonthsong.artist, top100weeks44: fortyfourthmonthsong.position.weeksOnChart, top100image44: fortyfourthmonthsong.cover,
+        top100title45: fortyfifthmonthsong.title, top100artist45: fortyfifthmonthsong.artist, top100weeks45: fortyfifthmonthsong.position.weeksOnChart, top100image45: fortyfifthmonthsong.cover,
+        top100title46: fortysixthmonthsong.title, top100artist46: fortysixthmonthsong.artist, top100weeks46: fortysixthmonthsong.position.weeksOnChart, top100image46: fortysixthmonthsong.cover,
+        top100title47: fortyseventhmonthsong.title, top100artist47: fortyseventhmonthsong.artist, top100weeks47: fortyseventhmonthsong.position.weeksOnChart, top100image47: fortyseventhmonthsong.cover,
+        top100title48: fortyeighthmonthsong.title, top100artist48: fortyeighthmonthsong.artist, top100weeks48: fortyeighthmonthsong.position.weeksOnChart, top100image48: fortyeighthmonthsong.cover,
+        top100title49: fortyninthmonthsong.title, top100artist49: fortyninthmonthsong.artist, top100weeks49: fortyninthmonthsong.position.weeksOnChart, top100image49: fortyninthmonthsong.cover,
+        top100title50: fiftythmonthsong.title, top100artist50: fiftythmonthsong.artist, top100weeks50: fiftythmonthsong.position.weeksOnChart, top100image50: fiftythmonthsong.cover,
+        top100title51: fiftyfirstmonthsong.title, top100artist51: fiftyfirstmonthsong.artist, top100weeks51: fiftyfirstmonthsong.position.weeksOnChart, top100image51: fiftyfirstmonthsong.cover,
+        top100title52: fiftysecondmonthsong.title, top100artist52: fiftysecondmonthsong.artist, top100weeks52: fiftysecondmonthsong.position.weeksOnChart, top100image52: fiftysecondmonthsong.cover,
+        top100title53: fiftythirdmonthsong.title, top100artist53: fiftythirdmonthsong.artist, top100weeks53: fiftythirdmonthsong.position.weeksOnChart, top100image53: fiftythirdmonthsong.cover,
+        top100title54: fiftyfourthmonthsong.title, top100artist54: fiftyfourthmonthsong.artist, top100weeks54: fiftyfourthmonthsong.position.weeksOnChart, top100image54: fiftyfourthmonthsong.cover,
+        top100title55: fiftyfifthmonthsong.title, top100artist55: fiftyfifthmonthsong.artist, top100weeks55: fiftyfifthmonthsong.position.weeksOnChart, top100image55: fiftyfifthmonthsong.cover,
+        top100title56: fiftysixthmonthsong.title, top100artist56: fiftysixthmonthsong.artist, top100weeks56: fiftysixthmonthsong.position.weeksOnChart, top100image56: fiftysixthmonthsong.cover,
+        top100title57: fiftyseventhmonthsong.title, top100artist57: fiftyseventhmonthsong.artist, top100weeks57: fiftyseventhmonthsong.position.weeksOnChart, top100image57: fiftyseventhmonthsong.cover,
+        top100title58: fiftyeighthmonthsong.title, top100artist58: fiftyeighthmonthsong.artist, top100weeks58: fiftyeighthmonthsong.position.weeksOnChart, top100image58: fiftyeighthmonthsong.cover,
+        top100title59: fiftyninthmonthsong.title, top100artist59: fiftyninthmonthsong.artist, top100weeks59: fiftyninthmonthsong.position.weeksOnChart, top100image59: fiftyninthmonthsong.cover,
+        top100title60: sixtythmonthsong.title, top100artist60: sixtythmonthsong.artist, top100weeks60: sixtythmonthsong.position.weeksOnChart, top100image60: sixtythmonthsong.cover,
+        top100title61: sixtyfirstmonthsong.title, top100artist61: sixtyfirstmonthsong.artist, top100weeks61: sixtyfirstmonthsong.position.weeksOnChart, top100image61: sixtyfirstmonthsong.cover,
+        top100title62: sixtysecondmonthsong.title, top100artist62: sixtysecondmonthsong.artist, top100weeks62: sixtysecondmonthsong.position.weeksOnChart, top100image62: sixtysecondmonthsong.cover,
+        top100title63: sixtythirdmonthsong.title, top100artist63: sixtythirdmonthsong.artist, top100weeks63: sixtythirdmonthsong.position.weeksOnChart, top100image63: sixtythirdmonthsong.cover,
+        top100title64: sixtyfourthmonthsong.title, top100artist64: sixtyfourthmonthsong.artist, top100weeks64: sixtyfourthmonthsong.position.weeksOnChart, top100image64: sixtyfourthmonthsong.cover,
+        top100title65: sixtyfifthmonthsong.title, top100artist65: sixtyfifthmonthsong.artist, top100weeks65: sixtyfifthmonthsong.position.weeksOnChart, top100image65: sixtyfifthmonthsong.cover,
+        top100title66: sixtysixthmonthsong.title, top100artist66: sixtysixthmonthsong.artist, top100weeks66: sixtysixthmonthsong.position.weeksOnChart, top100image66: sixtysixthmonthsong.cover,
+        top100title67: sixtyseventhmonthsong.title, top100artist67: sixtyseventhmonthsong.artist, top100weeks67: sixtyseventhmonthsong.position.weeksOnChart, top100image67: sixtyseventhmonthsong.cover,
+        top100title68: sixtyeighthmonthsong.title, top100artist68: sixtyeighthmonthsong.artist, top100weeks68: sixtyeighthmonthsong.position.weeksOnChart, top100image68: sixtyeighthmonthsong.cover,
+        top100title69: sixtyninthmonthsong.title, top100artist69: sixtyninthmonthsong.artist, top100weeks69: sixtyninthmonthsong.position.weeksOnChart, top100image69: sixtyninthmonthsong.cover,
+        top100title70: seventythmonthsong.title, top100artist70: seventythmonthsong.artist, top100weeks70: seventythmonthsong.position.weeksOnChart, top100image70: seventythmonthsong.cover,
+        top100title71: seventyfirstmonthsong.title, top100artist71: seventyfirstmonthsong.artist, top100weeks71: seventyfirstmonthsong.position.weeksOnChart, top100image71: seventyfirstmonthsong.cover,
+        top100title72: seventysecondmonthsong.title, top100artist72: seventysecondmonthsong.artist, top100weeks72: seventysecondmonthsong.position.weeksOnChart, top100image72: seventysecondmonthsong.cover,
+        top100title73: seventythirdmonthsong.title, top100artist73: seventythirdmonthsong.artist, top100weeks73: seventythirdmonthsong.position.weeksOnChart, top100image73: seventythirdmonthsong.cover,
+        top100title74: seventyfourthmonthsong.title, top100artist74: seventyfourthmonthsong.artist, top100weeks74: seventyfourthmonthsong.position.weeksOnChart, top100image74: seventyfourthmonthsong.cover,
+        top100title75: seventyfifthmonthsong.title, top100artist75: seventyfifthmonthsong.artist, top100weeks75: seventyfifthmonthsong.position.weeksOnChart, top100image75: seventyfifthmonthsong.cover,
+        top100title76: seventysixthmonthsong.title, top100artist76: seventysixthmonthsong.artist, top100weeks76: seventysixthmonthsong.position.weeksOnChart, top100image76: seventysixthmonthsong.cover,
+        top100title77: seventyseventhmonthsong.title, top100artist77: seventyseventhmonthsong.artist, top100weeks77: seventyseventhmonthsong.position.weeksOnChart, top100image77: seventyseventhmonthsong.cover,
+        top100title78: seventyeighthmonthsong.title, top100artist78: seventyeighthmonthsong.artist, top100weeks78: seventyeighthmonthsong.position.weeksOnChart, top100image78: seventyeighthmonthsong.cover,
+        top100title79: seventyninthmonthsong.title, top100artist79: seventyninthmonthsong.artist, top100weeks79: seventyninthmonthsong.position.weeksOnChart, top100image79: seventyninthmonthsong.cover,
+        top100title80: eightythmonthsong.title, top100artist80: eightythmonthsong.artist, top100weeks80: eightythmonthsong.position.weeksOnChart, top100image80: eightythmonthsong.cover,
+        top100title81: eightyfirstmonthsong.title, top100artist81: eightyfirstmonthsong.artist, top100weeks81: eightyfirstmonthsong.position.weeksOnChart, top100image81: eightyfirstmonthsong.cover,
+        top100title82: eightysecondmonthsong.title, top100artist82: eightysecondmonthsong.artist, top100weeks82: eightysecondmonthsong.position.weeksOnChart, top100image82: eightysecondmonthsong.cover,
+        top100title83: eightythirdmonthsong.title, top100artist83: eightythirdmonthsong.artist, top100weeks83: eightythirdmonthsong.position.weeksOnChart, top100image83: eightythirdmonthsong.cover,
+        top100title84: eightyfourthmonthsong.title, top100artist84: eightyfourthmonthsong.artist, top100weeks84: eightyfourthmonthsong.position.weeksOnChart, top100image84: eightyfourthmonthsong.cover,
+        top100title85: eightyfifthmonthsong.title, top100artist85: eightyfifthmonthsong.artist, top100weeks85: eightyfifthmonthsong.position.weeksOnChart, top100image85: eightyfifthmonthsong.cover,
+        top100title86: eightysixthmonthsong.title, top100artist86: eightysixthmonthsong.artist, top100weeks86: eightysixthmonthsong.position.weeksOnChart, top100image86: eightysixthmonthsong.cover,
+        top100title87: eightyseventhmonthsong.title, top100artist87: eightyseventhmonthsong.artist, top100weeks87: eightyseventhmonthsong.position.weeksOnChart, top100image87: eightyseventhmonthsong.cover,
+        top100title88: eightyeighthmonthsong.title, top100artist88: eightyeighthmonthsong.artist, top100weeks88: eightyeighthmonthsong.position.weeksOnChart, top100image88: eightyeighthmonthsong.cover,
+        top100title89: eightyninthmonthsong.title, top100artist89: eightyninthmonthsong.artist, top100weeks89: eightyninthmonthsong.position.weeksOnChart, top100image89: eightyninthmonthsong.cover,
+        top100title90: nintythmonthsong.title, top100artist90: nintythmonthsong.artist, top100weeks90: nintythmonthsong.position.weeksOnChart, top100image90: nintythmonthsong.cover,
+        top100title91: nintyfirstmonthsong.title, top100artist91: nintyfirstmonthsong.artist, top100weeks91: nintyfirstmonthsong.position.weeksOnChart, top100image91: nintyfirstmonthsong.cover,
+        top100title92: nintysecondmonthsong.title, top100artist92: nintysecondmonthsong.artist, top100weeks92: nintysecondmonthsong.position.weeksOnChart, top100image92: nintysecondmonthsong.cover,
+        top100title93: nintythirdmonthsong.title, top100artist93: nintythirdmonthsong.artist, top100weeks93: nintythirdmonthsong.position.weeksOnChart, top100image93: nintythirdmonthsong.cover,
+        top100title94: nintyfourthmonthsong.title, top100artist94: nintyfourthmonthsong.artist, top100weeks94: nintyfourthmonthsong.position.weeksOnChart, top100image94: nintyfourthmonthsong.cover,
+        top100title95: nintyfifthmonthsong.title, top100artist95: nintyfifthmonthsong.artist, top100weeks95: nintyfifthmonthsong.position.weeksOnChart, top100image95: nintyfifthmonthsong.cover,
+        top100title96: nintysixthmonthsong.title, top100artist96: nintysixthmonthsong.artist, top100weeks96: nintysixthmonthsong.position.weeksOnChart, top100image96: nintysixthmonthsong.cover,
+        top100title97: nintyseventhmonthsong.title, top100artist97: nintyseventhmonthsong.artist, top100weeks97: nintyseventhmonthsong.position.weeksOnChart, top100image97: nintyseventhmonthsong.cover,
+        top100title98: nintyeighthmonthsong.title, top100artist98: nintyeighthmonthsong.artist, top100weeks98: nintyeighthmonthsong.position.weeksOnChart, top100image98: nintyeighthmonthsong.cover,
+        top100title99: nintyninthmonthsong.title, top100artist99: nintyninthmonthsong.artist, top100weeks99: nintyninthmonthsong.position.weeksOnChart, top100image99: nintyninthmonthsong.cover,
+        top100title100: onehundredthmonthsong.title, top100artist100: onehundredthmonthsong.artist, top100weeks100: onehundredthmonthsong.position.weeksOnChart, top100image100: onehundredthmonthsong.cover,
+        });
 });
 
+/* 
 // CREATES HALFYEAR SERVER
 app.get('/halfYear', (req, res) => {
   console.log(`request was made: ${req.url}`);
@@ -302,6 +395,8 @@ getChart('top-album-sales', (err, chart) => {
   console.log('today-albums.json was created!');
 });
 
+*/
+
 // CREATE MONTH JSON
 monthDate = getDate(30);
 getChart('hot-100', monthDate, (err, chart) => {
@@ -313,8 +408,116 @@ getChart('hot-100', monthDate, (err, chart) => {
     }
   });
   console.log('month.json was created!');
+
+  fs.readFile('month.json', (err, data) => {
+    console.log("IN READFILE");
+    if (err) throw err;
+    let chart = JSON.parse(data);
+    topmonthsong = utilities.testfunc(chart);
+    secondmonthsong = utilities.testfunc2(chart);
+    thirdmonthsong = utilities.testfunc3(chart);
+    fourthmonthsong = utilities.testfunc4(chart);
+    fifthmonthsong = utilities.testfunc5(chart);
+    sixthmonthsong = utilities.testfunc6(chart);
+    seventhmonthsong = utilities.testfunc7(chart);
+    eigthmonthsong = utilities.testfunc8(chart);
+    ninthmonthsong = utilities.testfunc9(chart);
+    tenthmonthsong = utilities.testfunc10(chart);
+    eleventhmonthsong = utilities.testfunc11(chart);
+    twelfthmonthsong = utilities.testfunc12(chart);
+    thirteenthmonthsong = utilities.testfunc13(chart);
+    fourteenthmonthsong = utilities.testfunc14(chart);
+    fifteenthmonthsong = utilities.testfunc15(chart);
+    sixteenthmonthsong = utilities.testfunc16(chart);
+    seventeenthmonthsong = utilities.testfunc17(chart);
+    eigthteenthmonthsong = utilities.testfunc18(chart);
+    ninteenthmonthsong = utilities.testfunc19(chart);
+    twentiethmonthsong = utilities.testfunc20(chart);
+    twentyfirstmonthsong = utilities.testfunc21(chart);
+    twentysecondmonthsong = utilities.testfunc22(chart);
+    twentythirdmonthsong = utilities.testfunc23(chart);
+    twentyfourthmonthsong = utilities.testfunc24(chart);
+    twentyfifthmonthsong = utilities.testfunc25(chart);
+    twentysixthmonthsong = utilities.testfunc26(chart);
+    twentyseventhmonthsong = utilities.testfunc27(chart);
+    twentyeighthmonthsong = utilities.testfunc28(chart);
+    twentyninthmonthsong = utilities.testfunc29(chart);
+    thirtiethmonthsong = utilities.testfunc30(chart);
+    thirtiefirstmonthsong = utilities.testfunc31(chart);
+    thirtiesecondmonthsong = utilities.testfunc32(chart);
+    thirtiethirdmonthsong = utilities.testfunc33(chart);
+    thirtiefourthmonthsong = utilities.testfunc34(chart);
+    thirtiefifthmonthsong = utilities.testfunc35(chart);
+    thirtiesixthmonthsong = utilities.testfunc36(chart);
+    thirtieseventhmonthsong = utilities.testfunc37(chart);
+    thirtieeighthmonthsong = utilities.testfunc38(chart);
+    thirtieninthmonthsong = utilities.testfunc39(chart);
+    fortiethmonthsong = utilities.testfunc40(chart);
+    fortyfirstmonthsong = utilities.testfunc41(chart);
+    fortysecondmonthsong = utilities.testfunc42(chart);
+    fortythirdmonthsong = utilities.testfunc43(chart);
+    fortyfourthmonthsong = utilities.testfunc44(chart);
+    fortyfifthmonthsong = utilities.testfunc45(chart);
+    fortysixthmonthsong = utilities.testfunc46(chart);
+    fortyseventhmonthsong = utilities.testfunc47(chart);
+    fortyeighthmonthsong = utilities.testfunc48(chart);
+    fortyninthmonthsong = utilities.testfunc49(chart);
+    fiftythmonthsong = utilities.testfunc50(chart);
+    fiftyfirstmonthsong = utilities.testfunc51(chart);
+    fiftysecondmonthsong = utilities.testfunc52(chart);
+    fiftythirdmonthsong = utilities.testfunc53(chart);
+    fiftyfourthmonthsong = utilities.testfunc54(chart);
+    fiftyfifthmonthsong = utilities.testfunc55(chart);
+    fiftysixthmonthsong = utilities.testfunc56(chart);
+    fiftyseventhmonthsong = utilities.testfunc57(chart);
+    fiftyeighthmonthsong = utilities.testfunc58(chart);
+    fiftyninthmonthsong = utilities.testfunc59(chart);
+    sixtythmonthsong = utilities.testfunc60(chart);
+    sixtyfirstmonthsong = utilities.testfunc61(chart);
+    sixtysecondmonthsong = utilities.testfunc62(chart);
+    sixtythirdmonthsong = utilities.testfunc63(chart);
+    sixtyfourthmonthsong = utilities.testfunc64(chart);
+    sixtyfifthmonthsong = utilities.testfunc65(chart);
+    sixtysixthmonthsong = utilities.testfunc66(chart);
+    sixtyseventhmonthsong = utilities.testfunc67(chart);
+    sixtyeighthmonthsong = utilities.testfunc68(chart);
+    sixtyninthmonthsong = utilities.testfunc69(chart);
+    seventythmonthsong = utilities.testfunc60(chart);
+    seventyfirstmonthsong = utilities.testfunc71(chart);
+    seventysecondmonthsong = utilities.testfunc72(chart);
+    seventythirdmonthsong = utilities.testfunc73(chart);
+    seventyfourthmonthsong = utilities.testfunc74(chart);
+    seventyfifthmonthsong = utilities.testfunc75(chart);
+    seventysixthmonthsong = utilities.testfunc76(chart);
+    seventyseventhmonthsong = utilities.testfunc77(chart);
+    seventyeighthmonthsong = utilities.testfunc78(chart);
+    seventyninthmonthsong = utilities.testfunc79(chart);
+    eightythmonthsong = utilities.testfunc80(chart);
+    eightyfirstmonthsong = utilities.testfunc81(chart);
+    eightysecondmonthsong = utilities.testfunc82(chart);
+    eightythirdmonthsong = utilities.testfunc83(chart);
+    eightyfourthmonthsong = utilities.testfunc84(chart);
+    eightyfifthmonthsong = utilities.testfunc85(chart);
+    eightysixthmonthsong = utilities.testfunc86(chart);
+    eightyseventhmonthsong = utilities.testfunc87(chart);
+    eightyeighthmonthsong = utilities.testfunc88(chart);
+    eightyninthmonthsong = utilities.testfunc89(chart);
+    nintythmonthsong = utilities.testfunc90(chart);
+    nintyfirstmonthsong = utilities.testfunc91(chart);
+    nintysecondmonthsong = utilities.testfunc92(chart);
+    nintythirdmonthsong = utilities.testfunc93(chart);
+    nintyfourthmonthsong = utilities.testfunc94(chart);
+    nintyfifthmonthsong = utilities.testfunc95(chart);
+    nintysixthmonthsong = utilities.testfunc96(chart);
+    nintyseventhmonthsong = utilities.testfunc97(chart);
+    nintyeighthmonthsong = utilities.testfunc98(chart);
+    nintyninthmonthsong = utilities.testfunc99(chart);
+    onehundredthmonthsong = utilities.testfunc100(chart);
+    });
 });
 
+
+/*
 // CREATE MONTH ARTISTS JSON
 getChart('artist-100', monthDate, (err, chart) => {
   if (err) console.log(err);
