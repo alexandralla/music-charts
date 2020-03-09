@@ -110,6 +110,8 @@ ol.top-100-listing {
 .top-100-listing.top-100-obj {
     background-color: #EDEDED;
     padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
     list-style-type: none; 
     border: 2px outset #FC4445;
     height: max-content;
