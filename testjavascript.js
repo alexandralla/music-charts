@@ -238,6 +238,70 @@
     function testfunc79(x){
         return x[78];
     }
+    function testfunc80(x){
+        return x[89];
+    }
+    function testfunc81(x){
+        return x[80];
+    }
+    function testfunc82(x){
+        return x[81];
+    }
+    function testfunc83(x){
+        return x[82];
+    }
+    function testfunc84(x){
+        return x[83];
+    }
+    function testfunc85(x){
+        return x[84];
+    }
+    function testfunc86(x){
+        return x[85];
+    }
+    function testfunc87(x){
+        return x[86];
+    }
+    function testfunc88(x){
+        return x[87];
+    }
+    function testfunc89(x){
+        return x[88];
+    }
+    function testfunc90(x){
+        return x[89];
+    }
+    function testfunc91(x){
+        return x[90];
+    }
+    function testfunc92(x){
+        return x[91];
+    }
+    function testfunc93(x){
+        return x[92];
+    }
+    function testfunc94(x){
+        return x[93];
+    }
+    function testfunc95(x){
+        return x[94];
+    }
+    function testfunc96(x){
+        return x[95];
+    }
+    function testfunc97(x){
+        return x[96];
+    }
+    function testfunc98(x){
+        return x[97];
+    }
+    function testfunc99(x){
+        return x[98];
+    }
+    function testfunc100(x){
+        return x[99];
+    }
+    
     exports.testfunc = testfunc;
     exports.testfunc2 = testfunc2;
     exports.testfunc3 = testfunc3;
@@ -317,5 +381,26 @@
     exports.testfunc77 = testfunc77;
     exports.testfunc78 = testfunc78;
     exports.testfunc79 = testfunc79;
+    exports.testfunc80 = testfunc80;
+    exports.testfunc81 = testfunc81;
+    exports.testfunc82 = testfunc82;
+    exports.testfunc83 = testfunc83;
+    exports.testfunc84 = testfunc84;
+    exports.testfunc85 = testfunc85;
+    exports.testfunc86 = testfunc86;
+    exports.testfunc87 = testfunc87;
+    exports.testfunc88 = testfunc88;
+    exports.testfunc89 = testfunc89;
+    exports.testfunc90 = testfunc90;
+    exports.testfunc91 = testfunc91;
+    exports.testfunc92 = testfunc92;
+    exports.testfunc93 = testfunc93;
+    exports.testfunc94 = testfunc94;
+    exports.testfunc95 = testfunc95;
+    exports.testfunc96 = testfunc96;
+    exports.testfunc97 = testfunc97;
+    exports.testfunc98 = testfunc98;
+    exports.testfunc99 = testfunc99;
+    exports.testfunc100 = testfunc100;
 })(typeof exports === 'undefined'?  
             this['testjavascript']={}: exports); 
