@@ -9,9 +9,9 @@ html
     script(src='jquery-3.4.1.min.js')
   body
     figure#logo
-      img(src='musicgif.gif', alt='musical notes', height='160', width='60')
+      img(src='./musicgif.gif', alt='musical notes', height='160', width='60')
       img(src='https://raw.githubusercontent.com/darthbatman/billboard-top-100/HEAD/logo.png', alt='Billboard Logo')
-      img(src='musicgif.gif', alt='musical notes', height='160', width='60')
+      img(src='./musicgif.gif', alt='musical notes', height='160', width='60')
     .navbar
       a(href='/today') Today
       a(href='/month') One Month Ago
@@ -26,12 +26,11 @@ html
             | #
             img.number1(src='https://www.billboard.com/assets/1583359525/images/charts/number-one.svg?6af5a4550aebfa240dae', width='60px', height='120px')
           span.number-song SONG
-        img#cover.top-song-cover
+        img#cover.top-song-cover.image(src='#{top100image1}', width='160', height='160')
         .top-song-details
-          .top-song-info
-            p #{topsongtitle} 
-            p #{topsongartist}
-            p #{topsongweeks} weeks on the chart
+          p.top-song-info #{topsongtitle} 
+          p.top-song-info #{topsongartist}
+          p.top-song-info #{topsongweeks} weeks on the chart
       .box.top-vid
         | Check out the #1 song!
         iframe.youtubevid(width='370', height='250', src='https://www.youtube.com/embed/UNZqm3dxd2w')
@@ -40,84 +39,74 @@ html
         ol.top-100-listing
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #1
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image1}', width='160', height='160')
             .top-100-listing.top-song-details 
               p #{top100title1}
               p #{top100artist1}
               p #{top100weeks1} weeks on the chart
-              img.image(src='/#{top100image1}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #2
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image2}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title2}
               p #{top100artist2}
               p #{top100weeks2} weeks on the chart
-              img.image(src='/#{top100image2}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #3
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image3}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title3}
               p #{top100artist3}
               p #{top100weeks3} weeks on the chart
-              img.image(src='/#{top100image3}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #4
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image4}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title4}
               p #{top100artist4}
               p #{top100weeks4} weeks on the chart
-              img.image(src='/#{top100image4}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #5
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image5}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title5}
               p #{top100artist5}
               p #{top100weeks5} weeks on the chart
-              img.image(src='/#{top100image5}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #6
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image6}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title6}
               p #{top100artist6}
               p #{top100weeks6} weeks on the chart
-              img.image(src='/#{top100image6}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #7
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image7}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title7}
               p #{top100artist7}
               p #{top100weeks7} weeks on the chart
-              img.image(src='/#{top100image7}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #8
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image8}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title8}
               p #{top100artist8}
               p #{top100weeks8} weeks on the chart
-              img.image(src='/#{top100image8}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #9
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image9}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title9}
               p #{top100artist9}
               p #{top100weeks9} weeks on the chart
-              img.image(src='/#{top100image9}')
           li.top-100-listing.top-100-obj
             p.top-100-listing.top-100-number #10
-            img#top-100-cover.top-100-cover
+            img#top-100-cover.top-100-cover.image(src='#{top100image10}', width='160', height='160')
             .top-100-listing.top-song-details
               p #{top100title10}
               p #{top100artist10}
               p #{top100weeks10} weeks on the chart
-              img.image(src='/#{top100image10}')
       .box.top-artists
         h4.top-100-header HOT Artists
         ol.top-artists-listing(style='margin-top: 50px;')

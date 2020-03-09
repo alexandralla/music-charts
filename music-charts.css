@@ -55,8 +55,8 @@
 
 .top-song-details {
     margin-top: 0px;
-    background-color: transparent;
-    font-size: 21px;
+    background-color: red;
+    font-size: 18px;
 }
 
 .box.top-vid {
@@ -205,10 +205,12 @@ h4 {
     -webkit-text-stroke-color: rgb(42, 74, 218);
     margin-right: 0px;
 }
+
 .number1 {
     background-color: #F7C200;
     margin-left: 0px;
 }
+
 .number-song {
     background-color: #F7C200;
     color:#EDEDED;
