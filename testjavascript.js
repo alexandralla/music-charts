@@ -151,6 +151,63 @@
     function testfunc50(x){
         return x[49];
     }
+    function testfunc51(x){
+        return x[50];
+    }
+    function testfunc52(x){
+        return x[51];
+    }
+    function testfunc53(x){
+        return x[52];
+    }
+    function testfunc54(x){
+        return x[53];
+    }
+    function testfunc55(x){
+        return x[54];
+    }
+    function testfunc56(x){
+        return x[55];
+    }
+    function testfunc57(x){
+        return x[56];
+    }
+    function testfunc58(x){
+        return x[57];
+    }
+    function testfunc59(x){
+        return x[58];
+    }
+    function testfunc60(x){
+        return x[59];
+    }
+    function testfunc61(x){
+        return x[60];
+    }
+    function testfunc62(x){
+        return x[61];
+    }
+    function testfunc63(x){
+        return x[62];
+    }
+    function testfunc64(x){
+        return x[63];
+    }
+    function testfunc65(x){
+        return x[64];
+    }
+    function testfunc66(x){
+        return x[65];
+    }
+    function testfunc67(x){
+        return x[66];
+    }
+    function testfunc68(x){
+        return x[67];
+    }
+    function testfunc69(x){
+        return x[68];
+    }
     exports.testfunc = testfunc;
     exports.testfunc2 = testfunc2;
     exports.testfunc3 = testfunc3;
@@ -201,6 +258,25 @@
     exports.testfunc48 = testfunc48;
     exports.testfunc49 = testfunc49;
     exports.testfunc50 = testfunc50;
+    exports.testfunc51 = testfunc51;
+    exports.testfunc52 = testfunc52;
+    exports.testfunc53 = testfunc53;
+    exports.testfunc54 = testfunc54;
+    exports.testfunc55 = testfunc55;
+    exports.testfunc56 = testfunc56;
+    exports.testfunc57 = testfunc57;
+    exports.testfunc58 = testfunc58;
+    exports.testfunc59 = testfunc59;
+    exports.testfunc60 = testfunc60;
+    exports.testfunc61 = testfunc61;
+    exports.testfunc62 = testfunc62;
+    exports.testfunc63 = testfunc63;
+    exports.testfunc64 = testfunc64;
+    exports.testfunc65 = testfunc65;
+    exports.testfunc66 = testfunc66;
+    exports.testfunc67 = testfunc67;
+    exports.testfunc68 = testfunc68;
+    exports.testfunc69 = testfunc69;
        
 })(typeof exports === 'undefined'?  
             this['testjavascript']={}: exports); 

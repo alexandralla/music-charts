@@ -78,6 +78,26 @@ app.get('/', (req, res) => {
     top100title48: fortyeighthsong.title, top100artist48: fortyeighthsong.artist, top100weeks48: fortyeighthsong.position.weeksOnChart, top100image48: fortyeighthsong.cover,
     top100title49: fortyninthsong.title, top100artist49: fortyninthsong.artist, top100weeks49: fortyninthsong.position.weeksOnChart, top100image49: fortyninthsong.cover,
     top100title50: fiftythsong.title, top100artist50: fiftythsong.artist, top100weeks50: fiftythsong.position.weeksOnChart, top100image50: fiftythsong.cover,
+    top100title51: fiftyfirstsong.title, top100artist51: fiftyfirstsong.artist, top100weeks51: fiftyfirstsong.position.weeksOnChart, top100image51: fiftyfirstsong.cover,
+    top100title52: fiftysecondsong.title, top100artist52: fiftysecondsong.artist, top100weeks52: fiftysecondsong.position.weeksOnChart, top100image52: fiftysecondsong.cover,
+    top100title53: fiftythirdsong.title, top100artist53: fiftythirdsong.artist, top100weeks53: fiftythirdsong.position.weeksOnChart, top100image53: fiftythirdsong.cover,
+    top100title54: fiftyfourthsong.title, top100artist54: fiftyfourthsong.artist, top100weeks54: fiftyfourthsong.position.weeksOnChart, top100image54: fiftyfourthsong.cover,
+    top100title55: fiftyfifthsong.title, top100artist55: fiftyfifthsong.artist, top100weeks55: fiftyfifthsong.position.weeksOnChart, top100image55: fiftyfifthsong.cover,
+    top100title56: fiftysixthsong.title, top100artist56: fiftysixthsong.artist, top100weeks56: fiftysixthsong.position.weeksOnChart, top100image56: fiftysixthsong.cover,
+    top100title57: fiftyseventhsong.title, top100artist57: fiftyseventhsong.artist, top100weeks57: fiftyseventhsong.position.weeksOnChart, top100image57: fiftyseventhsong.cover,
+    top100title58: fiftyeighthsong.title, top100artist58: fiftyeighthsong.artist, top100weeks58: fiftyeighthsong.position.weeksOnChart, top100image58: fiftyeighthsong.cover,
+    top100title59: fiftyninthsong.title, top100artist59: fiftyninthsong.artist, top100weeks59: fiftyninthsong.position.weeksOnChart, top100image59: fiftyninthsong.cover,
+    top100title60: sixtythsong.title, top100artist60: sixtythsong.artist, top100weeks60: sixtythsong.position.weeksOnChart, top100image60: sixtythsong.cover,
+    top100title61: sixtyfirstsong.title, top100artist61: sixtyfirstsong.artist, top100weeks61: sixtyfirstsong.position.weeksOnChart, top100image61: sixtyfirstsong.cover,
+    top100title62: sixtysecondsong.title, top100artist62: sixtysecondsong.artist, top100weeks62: sixtysecondsong.position.weeksOnChart, top100image62: sixtysecondsong.cover,
+    top100title63: sixtythirdsong.title, top100artist63: sixtythirdsong.artist, top100weeks63: sixtythirdsong.position.weeksOnChart, top100image63: sixtythirdsong.cover,
+    top100title64: sixtyfourthsong.title, top100artist64: sixtyfourthsong.artist, top100weeks64: sixtyfourthsong.position.weeksOnChart, top100image64: sixtyfourthsong.cover,
+    top100title65: sixtyfifthsong.title, top100artist65: sixtyfifthsong.artist, top100weeks65: sixtyfifthsong.position.weeksOnChart, top100image65: sixtyfifthsong.cover,
+    top100title66: sixtysixthsong.title, top100artist66: sixtysixthsong.artist, top100weeks66: sixtysixthsong.position.weeksOnChart, top100image66: sixtysixthsong.cover,
+    top100title67: sixtyseventhsong.title, top100artist67: sixtyseventhsong.artist, top100weeks67: sixtyseventhsong.position.weeksOnChart, top100image67: sixtyseventhsong.cover,
+    top100title68: sixtyeighthsong.title, top100artist68: sixtyeighthsong.artist, top100weeks68: sixtyeighthsong.position.weeksOnChart, top100image68: sixtyeighthsong.cover,
+    top100title69: sixtyninthsong.title, top100artist69: sixtyninthsong.artist, top100weeks69: sixtyninthsong.position.weeksOnChart, top100image69: sixtyninthsong.cover,
+
 
 });
     
@@ -317,6 +337,25 @@ fs.readFile('today.json', (err, data) => {
   fortyeighthsong = utilities.testfunc48(chart);
   fortyninthsong = utilities.testfunc49(chart);
   fiftythsong = utilities.testfunc50(chart);
+  fiftyfirstsong = utilities.testfunc51(chart);
+  fiftysecondsong = utilities.testfunc52(chart);
+  fiftythirdsong = utilities.testfunc53(chart);
+  fiftyfourthsong = utilities.testfunc54(chart);
+  fiftyfifthsong = utilities.testfunc55(chart);
+  fiftysixthsong = utilities.testfunc56(chart);
+  fiftyseventhsong = utilities.testfunc57(chart);
+  fiftyeighthsong = utilities.testfunc58(chart);
+  fiftyninthsong = utilities.testfunc59(chart);
+  sixtythsong = utilities.testfunc60(chart);
+  sixtyfirstsong = utilities.testfunc61(chart);
+  sixtysecondsong = utilities.testfunc62(chart);
+  sixtythirdsong = utilities.testfunc63(chart);
+  sixtyfourthsong = utilities.testfunc64(chart);
+  sixtyfifthsong = utilities.testfunc65(chart);
+  sixtysixthsong = utilities.testfunc66(chart);
+  sixtyseventhsong = utilities.testfunc67(chart);
+  sixtyeighthsong = utilities.testfunc68(chart);
+  sixtyninthsong = utilities.testfunc69(chart);
 });
 
 app.listen(8080);
