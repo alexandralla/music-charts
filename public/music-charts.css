@@ -112,7 +112,7 @@ ol.top-100-listing {
     padding-left: 10px;
     list-style-type: none; 
     border: 2px outset #FC4445;
-    height: 200px;
+    height: max-content;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;

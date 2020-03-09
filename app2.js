@@ -58,6 +58,16 @@ app.get('/', (req, res) => {
     top100title28: twentyeighthsong.title, top100artist28: twentyeighthsong.artist, top100weeks28: twentyeighthsong.position.weeksOnChart, top100image28: twentyeighthsong.cover,
     top100title29: twentyninthsong.title, top100artist29: twentyninthsong.artist, top100weeks29: twentyninthsong.position.weeksOnChart, top100image29: twentyninthsong.cover,
     top100title30: thirtiethsong.title, top100artist30: thirtiethsong.artist, top100weeks30: thirtiethsong.position.weeksOnChart, top100image30: thirtiethsong.cover,
+    top100title31: thirtiefirstsong.title, top100artist31: thirtiefirstsong.artist, top100weeks31: thirtiefirstsong.position.weeksOnChart, top100image31: thirtiefirstsong.cover,
+    top100title32: thirtiesecondsong.title, top100artist32: thirtiesecondsong.artist, top100weeks32: thirtiesecondsong.position.weeksOnChart, top100image32: thirtiesecondsong.cover,
+    top100title33: thirtiethirdsong.title, top100artist33: thirtiethirdsong.artist, top100weeks33: thirtiethirdsong.position.weeksOnChart, top100image33: thirtiethirdsong.cover,
+    top100title34: thirtiefourthsong.title, top100artist34: thirtiefourthsong.artist, top100weeks34: thirtiefourthsong.position.weeksOnChart, top100image34: thirtiefourthsong.cover,
+    top100title35: thirtiefifthsong.title, top100artist35: thirtiefifthsong.artist, top100weeks35: thirtiefifthsong.position.weeksOnChart, top100image35: thirtiefifthsong.cover,
+    top100title36: thirtiesixthsong.title, top100artist36: thirtiesixthsong.artist, top100weeks36: thirtiesixthsong.position.weeksOnChart, top100image36: thirtiesixthsong.cover,
+    top100title37: thirtieseventhsong.title, top100artist37: thirtieseventhsong.artist, top100weeks37: thirtieseventhsong.position.weeksOnChart, top100image37: thirtieseventhsong.cover,
+    top100title38: thirtieeighthsong.title, top100artist38: thirtieeighthsong.artist, top100weeks38: thirtieeighthsong.position.weeksOnChart, top100image38: thirtieeighthsong.cover,
+    top100title39: thirtieninthsong.title, top100artist39: thirtieninthsong.artist, top100weeks39: thirtieninthsong.position.weeksOnChart, top100image39: thirtieninthsong.cover,
+    top100title40: fortiethsong.title, top100artist40: fortiethsong.artist, top100weeks40: fortiethsong.position.weeksOnChart, top100image40: fortiethsong.cover,
 
 });
     
@@ -277,16 +287,16 @@ fs.readFile('today.json', (err, data) => {
   twentyeighthsong = utilities.testfunc28(chart);
   twentyninthsong = utilities.testfunc29(chart);
   thirtiethsong = utilities.testfunc30(chart);
-  console.log(topsong);
-  console.log(secondsong);
-  console.log(thirdsong);
-  console.log(fourthsong);
-  console.log(fifthsong);
-  console.log(sixthsong);
-  console.log(seventhsong);
-  console.log(eigthsong);
-  console.log(ninthsong);
-  console.log(tenthsong);
+  thirtiefirstsong = utilities.testfunc31(chart);
+  thirtiesecondsong = utilities.testfunc32(chart);
+  thirtiethirdsong = utilities.testfunc33(chart);
+  thirtiefourthsong = utilities.testfunc34(chart);
+  thirtiefifthsong = utilities.testfunc35(chart);
+  thirtiesixthsong = utilities.testfunc36(chart);
+  thirtieseventhsong = utilities.testfunc37(chart);
+  thirtieeighthsong = utilities.testfunc38(chart);
+  thirtieninthsong = utilities.testfunc39(chart);
+  fortiethsong = utilities.testfunc40(chart);
 });
 
 app.listen(8080);

@@ -91,6 +91,36 @@
     function testfunc30(x){
         return x[29];
     }
+    function testfunc31(x){
+        return x[30];
+    }
+    function testfunc32(x){
+        return x[31];
+    }
+    function testfunc33(x){
+        return x[32];
+    }
+    function testfunc34(x){
+        return x[33];
+    }
+    function testfunc35(x){
+        return x[34];
+    }
+    function testfunc36(x){
+        return x[35];
+    }
+    function testfunc37(x){
+        return x[36];
+    }
+    function testfunc38(x){
+        return x[37];
+    }
+    function testfunc39(x){
+        return x[38];
+    }
+    function testfunc40(x){
+        return x[39];
+    }
     exports.testfunc = testfunc;
     exports.testfunc2 = testfunc2;
     exports.testfunc3 = testfunc3;
@@ -121,6 +151,16 @@
     exports.testfunc28 = testfunc28;
     exports.testfunc29 = testfunc29;
     exports.testfunc30 = testfunc30;
+    exports.testfunc31 = testfunc31;
+    exports.testfunc32 = testfunc32;
+    exports.testfunc33 = testfunc33;
+    exports.testfunc34 = testfunc34;
+    exports.testfunc35 = testfunc35;
+    exports.testfunc36 = testfunc36;
+    exports.testfunc37 = testfunc37;
+    exports.testfunc38 = testfunc38;
+    exports.testfunc39 = testfunc39;
+    exports.testfunc40 = testfunc40;
        
 })(typeof exports === 'undefined'?  
             this['testjavascript']={}: exports); 
