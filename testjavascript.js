@@ -208,6 +208,36 @@
     function testfunc69(x){
         return x[68];
     }
+    function testfunc70(x){
+        return x[69];
+    }
+    function testfunc71(x){
+        return x[70];
+    }
+    function testfunc72(x){
+        return x[71];
+    }
+    function testfunc73(x){
+        return x[72];
+    }
+    function testfunc74(x){
+        return x[73];
+    }
+    function testfunc75(x){
+        return x[74];
+    }
+    function testfunc76(x){
+        return x[75];
+    }
+    function testfunc77(x){
+        return x[76];
+    }
+    function testfunc78(x){
+        return x[77];
+    }
+    function testfunc79(x){
+        return x[78];
+    }
     exports.testfunc = testfunc;
     exports.testfunc2 = testfunc2;
     exports.testfunc3 = testfunc3;
@@ -277,6 +307,15 @@
     exports.testfunc67 = testfunc67;
     exports.testfunc68 = testfunc68;
     exports.testfunc69 = testfunc69;
-       
+    exports.testfunc70 = testfunc70;
+    exports.testfunc71 = testfunc71;
+    exports.testfunc72 = testfunc72;
+    exports.testfunc73 = testfunc73;
+    exports.testfunc74 = testfunc74;
+    exports.testfunc75 = testfunc75;
+    exports.testfunc76 = testfunc76;
+    exports.testfunc77 = testfunc77;
+    exports.testfunc78 = testfunc78;
+    exports.testfunc79 = testfunc79;
 })(typeof exports === 'undefined'?  
             this['testjavascript']={}: exports); 
