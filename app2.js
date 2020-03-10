@@ -3,8 +3,10 @@
 const express = require('express');
 const app = express(); // routes attached on this app instance
 const { getChart } = require('./billboard-top-100.js');
+const { getCoverFromChartItem } = require('./billboard-top-100');
 const { listCharts } = require('./billboard-top-100.js');
 const fs = require('fs');
+
 app.use(express.static(`${__dirname}/public`));
 
 app.set('views', __dirname + '/views');
@@ -24,6 +26,7 @@ function getDate(timeShift) {
 
   return [year, month, day].join('-');
 }
+
 
 // CREATES TODAY SERVER
 app.get('/', (req, res) => {
@@ -128,8 +131,17 @@ app.get('/', (req, res) => {
     top100title98: nintyeighthsong.title, top100artist98: nintyeighthsong.artist, top100weeks98: nintyeighthsong.position.weeksOnChart, top100image98: nintyeighthsong.cover,
     top100title99: nintyninthsong.title, top100artist99: nintyninthsong.artist, top100weeks99: nintyninthsong.position.weeksOnChart, top100image99: nintyninthsong.cover,
     top100title100: onehundredthsong.title, top100artist100: onehundredthsong.artist, top100weeks100: onehundredthsong.position.weeksOnChart, top100image100: onehundredthsong.cover,
-    });
-
+    topartist1: topartist.title, topartistimage1: topartist.cover,
+    topartist2: topartist2.title, topartistimage2: topartist2.cover,
+    topartist3: topartist3.title, topartistimage3: topartist3.cover,
+    topartist4: topartist4.title, topartistimage4: topartist4.cover,
+    topartist5: topartist5.title, topartistimage5: topartist5.cover,
+    topartist6: topartist6.title, topartistimage6: topartist6.cover,
+    topartist7: topartist7.title, topartistimage7: topartist7.cover,
+    topartist8: topartist8.title, topartistimage8: topartist8.cover,
+    topartist9: topartist9.title, topartistimage9: topartist9.cover,
+    topartist10: topartist10.title, topartistimage10: topartist10.cover,
+  });
 });
 
 
@@ -572,7 +584,7 @@ getChart('hot-100', (err, chart) => {
   });
   
 });
-/* 
+ 
 // CREATE TODAY ARTISTS JSON
 getChart('artist-100', (err, chart) => {
   if (err) console.log(err);
@@ -583,8 +595,54 @@ getChart('artist-100', (err, chart) => {
     }
   });
   console.log('today-artists.json was created!');
-});
 
+  fs.readFile('today-artists.json', (err, data) => {
+    console.log("IN READFILE");
+    if (err) throw err;
+    let chart = JSON.parse(data);
+    topartist = utilities.testfunc(chart);
+    var newCover = topartist.cover.replace('53', '180');
+    var newCover2 = newCover.replace('53', '180');
+    topartist.cover = newCover2;
+    topartist2 = utilities.testfunc2(chart);
+    var newCover_2 = topartist2.cover.replace('53', '180');
+    var newCover2_2 = newCover_2.replace('53', '180');
+    topartist2.cover = newCover2_2;
+    topartist3 = utilities.testfunc3(chart);
+    var newCover_3 = topartist3.cover.replace('53', '180');
+    var newCover2_3 = newCover_3.replace('53', '180');
+    topartist3.cover = newCover2_3;
+    topartist4 = utilities.testfunc4(chart);
+    var newCover_4 = topartist4.cover.replace('53', '180');
+    var newCover2_4 = newCover_4.replace('53', '180');
+    topartist4.cover = newCover2_4;
+    topartist5 = utilities.testfunc5(chart);
+    var newCover_5 = topartist5.cover.replace('53', '180');
+    var newCover2_5 = newCover_5.replace('53', '180');
+    topartist5.cover = newCover2_5;
+    topartist6 = utilities.testfunc6(chart);
+    var newCover_6 = topartist6.cover.replace('53', '180');
+    var newCover2_6 = newCover_6.replace('53', '180');
+    topartist6.cover = newCover2_6;
+    topartist7 = utilities.testfunc7(chart);
+    var newCover_7 = topartist7.cover.replace('53', '180');
+    var newCover2_7 = newCover_7.replace('53', '180');
+    topartist7.cover = newCover2_7;
+    topartist8 = utilities.testfunc8(chart);
+    var newCover_8 = topartist8.cover.replace('53', '180');
+    var newCover2_8 = newCover_8.replace('53', '180');
+    topartist8.cover = newCover2_8;
+    topartist9 = utilities.testfunc9(chart);
+    var newCover_9 = topartist9.cover.replace('53', '180');
+    var newCover2_9 = newCover_9.replace('53', '180');
+    topartist9.cover = newCover2_9;
+    topartist10 = utilities.testfunc10(chart);
+    var newCover_10 = topartist10.cover.replace('53', '180');
+    var newCover2_10 = newCover_10.replace('53', '180');
+    topartist10.cover = newCover2_10;
+  })
+});
+/*
 // CREATE TODAY ALBUMS JSON
 getChart('top-album-sales', (err, chart) => {
   if (err) console.log(err);
