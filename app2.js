@@ -141,6 +141,17 @@ app.get('/', (req, res) => {
     topartist8: topartist8.title, topartistimage8: topartist8.cover,
     topartist9: topartist9.title, topartistimage9: topartist9.cover,
     topartist10: topartist10.title, topartistimage10: topartist10.cover,
+
+    topalbum1: topalbum.title, topalbumimage1: topalbum.cover,
+    topalbum2: topalbum2.title, topalbumimage2: topalbum2.cover,
+    topalbum3: topalbum3.title, topalbumimage3: topalbum3.cover,
+    topalbum4: topalbum4.title, topalbumimage4: topalbum4.cover,
+    topalbum5: topalbum5.title, topalbumimage5: topalbum5.cover,
+    topalbum6: topalbum6.title, topalbumimage6: topalbum6.cover,
+    topalbum7: topalbum7.title, topalbumimage7: topalbum7.cover,
+    topalbum8: topalbum8.title, topalbumimage8: topalbum8.cover,
+    topalbum9: topalbum9.title, topalbumimage9: topalbum9.cover,
+    topalbum10: topalbum10.title, topalbumimage10: topalbum10.cover,
   });
 });
 
@@ -642,7 +653,7 @@ getChart('artist-100', (err, chart) => {
     topartist10.cover = newCover2_10;
   })
 });
-/*
+
 // CREATE TODAY ALBUMS JSON
 getChart('top-album-sales', (err, chart) => {
   if (err) console.log(err);
@@ -653,9 +664,55 @@ getChart('top-album-sales', (err, chart) => {
     }
   });
   console.log('today-albums.json was created!');
+
+  fs.readFile('today-albums.json', (err, data) => {
+    console.log("IN READFILE");
+    if (err) throw err;
+    let chart = JSON.parse(data);
+    topalbum = utilities.testfunc(chart);
+    var newCover = topalbum.cover.replace('53', '180');
+    var newCover2 = newCover.replace('53', '180');
+    topalbum.cover = newCover2;
+    topalbum2 = utilities.testfunc2(chart);
+    var newCover_2 = topalbum2.cover.replace('53', '180');
+    var newCover2_2 = newCover_2.replace('53', '180');
+    topalbum2.cover = newCover2_2;
+    topalbum3 = utilities.testfunc3(chart);
+    var newCover_3 = topalbum3.cover.replace('53', '180');
+    var newCover2_3 = newCover_3.replace('53', '180');
+    topalbum3.cover = newCover2_3;
+    topalbum4 = utilities.testfunc4(chart);
+    var newCover_4 = topalbum4.cover.replace('53', '180');
+    var newCover2_4 = newCover_4.replace('53', '180');
+    topalbum4.cover = newCover2_4;
+    topalbum5 = utilities.testfunc5(chart);
+    var newCover_5 = topalbum5.cover.replace('53', '180');
+    var newCover2_5 = newCover_5.replace('53', '180');
+    topalbum5.cover = newCover2_5;
+    topalbum6 = utilities.testfunc6(chart);
+    var newCover_6 = topalbum6.cover.replace('53', '180');
+    var newCover2_6 = newCover_6.replace('53', '180');
+    topalbum6.cover = newCover2_6;
+    topalbum7 = utilities.testfunc7(chart);
+    var newCover_7 = topalbum7.cover.replace('53', '180');
+    var newCover2_7 = newCover_7.replace('53', '180');
+    topalbum7.cover = newCover2_7;
+    topalbum8 = utilities.testfunc8(chart);
+    var newCover_8 = topalbum8.cover.replace('53', '180');
+    var newCover2_8 = newCover_8.replace('53', '180');
+    topalbum8.cover = newCover2_8;
+    topalbum9 = utilities.testfunc9(chart);
+    var newCover_9 = topalbum9.cover.replace('53', '180');
+    var newCover2_9 = newCover_9.replace('53', '180');
+    topalbum9.cover = newCover2_9;
+    topalbum10 = utilities.testfunc10(chart);
+    var newCover_10 = topalbum10.cover.replace('53', '180');
+    var newCover2_10 = newCover_10.replace('53', '180');
+    topalbum10.cover = newCover2_10;
+  })
 });
 
-*/
+
 
 // CREATE MONTH JSON
 monthDate = getDate(60);

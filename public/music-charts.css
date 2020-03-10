@@ -192,8 +192,9 @@ ol.top-100-listing {
     border: 2px outset #FC4445;
     font-size: 20px;
     height: 230px;
-    width: 230px;
+    width: max-content;
     display: inline-block;
+    justify-content: center;
 }
 
 #logo {

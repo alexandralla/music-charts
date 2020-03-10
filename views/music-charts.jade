@@ -773,16 +773,36 @@ html
       .box.top-albums
         h4.top-100-header HOT Albums
         ol.top-albums-listing
-          li.top-albums-listing.top-albums-obj 1
-          li.top-albums-listing.top-albums-obj 2
-          li.top-albums-listing.top-albums-obj 3
-          li.top-albums-listing.top-albums-obj 4
-          li.top-albums-listing.top-albums-obj 5
-          li.top-albums-listing.top-albums-obj 6
-          li.top-albums-listing.top-albums-obj 7
-          li.top-albums-listing.top-albums-obj 8
-          li.top-albums-listing.top-albums-obj 9
-          li.top-albums-listing.top-albums-obj 10
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum1}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage1}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum2}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage2}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum3}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage3}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum4}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage4}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum5}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage5}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum6}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage6}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum7}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage7}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum8}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage8}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum9}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage9}')
+          li.top-albums-listing.top-albums-obj
+            p #{topalbum10}
+            img#top-albums-cover.top-albums-cover.image(src='#{topalbumimage10}')
     script(type='text/javascript').
       $.getJSON("today.json", function(json) {
       document.getElementById("cover").src = json[0].cover;
