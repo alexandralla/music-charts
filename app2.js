@@ -27,7 +27,7 @@ function getDate(timeShift) {
 
 // CREATES TODAY SERVER
 app.get('/', (req, res) => {
-  res.render('music-charts', {topsongtitle: topsong.title, topsongartist: topsong.artist, topsongweeks: topsong.position.weeksOnChart, 
+  res.render('music-charts', {topsongvideo: "https://www.youtube.com/embed/UNZqm3dxd2w",topsongtitle: topsong.title, topsongartist: topsong.artist, topsongweeks: topsong.position.weeksOnChart, 
     top100title1: topsong.title, top100artist1: topsong.artist, top100weeks1: topsong.position.weeksOnChart, top100image1: topsong.cover, 
     top100title2: secondsong.title, top100artist2: secondsong.artist, top100weeks2: secondsong.position.weeksOnChart, top100image2: secondsong.cover,
     top100title3: thirdsong.title, top100artist3: thirdsong.artist, top100weeks3: thirdsong.position.weeksOnChart, top100image3: thirdsong.cover,
@@ -135,7 +135,7 @@ app.get('/', (req, res) => {
 
 // CREATES MONTH SERVER
 app.get('/month', (req, res) => {
-    res.render('music-charts', {topsongtitle: topmonthsong.title, topsongartist: topmonthsong.artist, topsongweeks: topmonthsong.position.weeksOnChart, 
+    res.render('music-charts', {topsongvideo: "https://www.youtube.com/embed/wXhTHyIgQ_U", topsongtitle: topmonthsong.title, topsongartist: topmonthsong.artist, topsongweeks: topmonthsong.position.weeksOnChart, 
         top100title1: topmonthsong.title, top100artist1: topmonthsong.artist, top100weeks1: topmonthsong.position.weeksOnChart, top100image1: topmonthsong.cover, 
         top100title2: secondmonthsong.title, top100artist2: secondmonthsong.artist, top100weeks2: secondmonthsong.position.weeksOnChart, top100image2: secondmonthsong.cover,
         top100title3: thirdmonthsong.title, top100artist3: thirdmonthsong.artist, top100weeks3: thirdmonthsong.position.weeksOnChart, top100image3: thirdmonthsong.cover,
@@ -242,7 +242,7 @@ app.get('/month', (req, res) => {
 
 // CREATES HALFYEAR SERVER
 app.get('/halfYear', (req, res) => {
-    res.render('music-charts', {topsongtitle: tophalfyearsong.title, topsongartist: tophalfyearsong.artist, topsongweeks: tophalfyearsong.position.weeksOnChart, 
+    res.render('music-charts', {topsongvideo: "https://www.youtube.com/embed/P00HMxdsVZI", topsongtitle: tophalfyearsong.title, topsongartist: tophalfyearsong.artist, topsongweeks: tophalfyearsong.position.weeksOnChart, 
         top100title1: tophalfyearsong.title, top100artist1: tophalfyearsong.artist, top100weeks1: tophalfyearsong.position.weeksOnChart, top100image1: tophalfyearsong.cover, 
         top100title2: secondhalfyearsong.title, top100artist2: secondhalfyearsong.artist, top100weeks2: secondhalfyearsong.position.weeksOnChart, top100image2: secondhalfyearsong.cover,
         top100title3: thirdhalfyearsong.title, top100artist3: thirdhalfyearsong.artist, top100weeks3: thirdhalfyearsong.position.weeksOnChart, top100image3: thirdhalfyearsong.cover,
@@ -350,7 +350,7 @@ app.get('/halfYear', (req, res) => {
 
 // CREATES YEAR SERVER
 app.get('/year', (req, res) => {
-    res.render('music-charts', {topsongtitle: topyearsong.title, topsongartist: topyearsong.artist, topsongweeks: topyearsong.position.weeksOnChart, 
+    res.render('music-charts', {topsongvideo: "https://www.youtube.com/embed/CnAmeh0-E-U", topsongtitle: topyearsong.title, topsongartist: topyearsong.artist, topsongweeks: topyearsong.position.weeksOnChart, 
         top100title1: topyearsong.title, top100artist1: topyearsong.artist, top100weeks1: topyearsong.position.weeksOnChart, top100image1: topyearsong.cover, 
         top100title2: secondyearsong.title, top100artist2: secondyearsong.artist, top100weeks2: secondyearsong.position.weeksOnChart, top100image2: secondyearsong.cover,
         top100title3: thirdyearsong.title, top100artist3: thirdyearsong.artist, top100weeks3: thirdyearsong.position.weeksOnChart, top100image3: thirdyearsong.cover,
