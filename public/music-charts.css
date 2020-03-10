@@ -143,6 +143,12 @@ ol.top-100-listing {
     white-space: nowrap;
 }
 
+.top-artists-listing.top-artists-obj {
+    text-align: center;
+    overflow: auto;
+}
+
+
 .top-artists-listing {
     margin-left: -10px;
     background-color: #519DD9;
