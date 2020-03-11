@@ -88,7 +88,7 @@
     font-size: 25px;
     background-color: #F7C200;
     width: 500px;
-    height: 670px;
+    height: 696px;
     overflow: auto;
     grid-column: 3 / span 2;
     grid-row: 1 / span 2;
@@ -141,6 +141,7 @@ ol.top-100-listing {
     grid-row: 2;
     overflow: auto;
     white-space: nowrap;
+    height: 315px;
 }
 
 .top-artists-listing.top-artists-obj {
@@ -188,17 +189,17 @@ ol.top-100-listing {
 
 .top-albums-listing.top-albums-obj {
     background-color: #EDEDED;
-    padding-left: 10px;
     list-style-type: none; 
     border: 2px outset #FC4445;
     font-size: 20px;
     height: 230px;
-    width: 300px;
+    width: 230px;
     display: inline-block;
     justify-content: center;
     margin: 10px;
     overflow: auto;
     white-space: nowrap;
+    text-align: center;
 }
 
 #logo {
