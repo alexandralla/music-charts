@@ -389,7 +389,29 @@ app.get('/halfYear', (req, res) => {
         top100title98: nintyeighthhalfyearsong.title, top100artist98: nintyeighthhalfyearsong.artist, top100weeks98: nintyeighthhalfyearsong.position.weeksOnChart, top100image98: nintyeighthhalfyearsong.cover,
         top100title99: nintyninthhalfyearsong.title, top100artist99: nintyninthhalfyearsong.artist, top100weeks99: nintyninthhalfyearsong.position.weeksOnChart, top100image99: nintyninthhalfyearsong.cover,
         top100title100: onehundredthhalfyearsong.title, top100artist100: onehundredthhalfyearsong.artist, top100weeks100: onehundredthhalfyearsong.position.weeksOnChart, top100image100: onehundredthhalfyearsong.cover,
-        });
+        
+        topartist1: topartisthalfyear.title, topartistimage1: topartisthalfyear.cover,
+        topartist2: topartist2halfyear.title, topartistimage2: topartist2halfyear.cover,
+        topartist3: topartist3halfyear.title, topartistimage3: topartist3halfyear.cover,
+        topartist4: topartist4halfyear.title, topartistimage4: topartist4halfyear.cover,
+        topartist5: topartist5halfyear.title, topartistimage5: topartist5halfyear.cover,
+        topartist6: topartist6halfyear.title, topartistimage6: topartist6halfyear.cover,
+        topartist7: topartist7halfyear.title, topartistimage7: topartist7halfyear.cover,
+        topartist8: topartist8halfyear.title, topartistimage8: topartist8halfyear.cover,
+        topartist9: topartist9halfyear.title, topartistimage9: topartist9halfyear.cover,
+        topartist10: topartist10halfyear.title, topartistimage10: topartist10halfyear.cover,
+    
+        topalbum1: topalbumhalfyear.title, topalbumimage1: topalbumhalfyear.cover,
+        topalbum2: topalbum2halfyear.title, topalbumimage2: topalbum2halfyear.cover,
+        topalbum3: topalbum3halfyear.title, topalbumimage3: topalbum3halfyear.cover,
+        topalbum4: topalbum4halfyear.title, topalbumimage4: topalbum4halfyear.cover,
+        topalbum5: topalbum5halfyear.title, topalbumimage5: topalbum5halfyear.cover,
+        topalbum6: topalbum6halfyear.title, topalbumimage6: topalbum6halfyear.cover,
+        topalbum7: topalbum7halfyear.title, topalbumimage7: topalbum7halfyear.cover,
+        topalbum8: topalbum8halfyear.title, topalbumimage8: topalbum8halfyear.cover,
+        topalbum9: topalbum9halfyear.title, topalbumimage9: topalbum9halfyear.cover,
+        topalbum10: topalbum10halfyear.title, topalbumimage10: topalbum10halfyear.cover,
+      });
 
 });
 
@@ -1092,7 +1114,7 @@ getChart('hot-100', halfYearDate, (err, chart) => {
   });
 });
 
-/*
+
 // CREATE HALF ARTISTS JSON
 getChart('artist-100', halfYearDate, (err, chart) => {
   if (err) console.log(err);
@@ -1103,9 +1125,54 @@ getChart('artist-100', halfYearDate, (err, chart) => {
     }
   });
   console.log('half-year-artists.json was created!');
+  fs.readFile('half-year-artists.json', (err, data) => {
+    console.log("IN READFILE");
+    if (err) throw err;
+    let chart = JSON.parse(data);
+    topartisthalfyear = utilities.testfunc(chart);
+    var newCover = topartisthalfyear.cover.replace('53', '180');
+    var newCover2 = newCover.replace('53', '180');
+    topartisthalfyear.cover = newCover2;
+    topartist2halfyear = utilities.testfunc2(chart);
+    var newCover_2 = topartist2halfyear.cover.replace('53', '180');
+    var newCover2_2 = newCover_2.replace('53', '180');
+    topartist2halfyear.cover = newCover2_2;
+    topartist3halfyear = utilities.testfunc3(chart);
+    var newCover_3 = topartist3halfyear.cover.replace('53', '180');
+    var newCover2_3 = newCover_3.replace('53', '180');
+    topartist3halfyear.cover = newCover2_3;
+    topartist4halfyear = utilities.testfunc4(chart);
+    var newCover_4 = topartist4halfyear.cover.replace('53', '180');
+    var newCover2_4 = newCover_4.replace('53', '180');
+    topartist4halfyear.cover = newCover2_4;
+    topartist5halfyear = utilities.testfunc5(chart);
+    var newCover_5 = topartist5halfyear.cover.replace('53', '180');
+    var newCover2_5 = newCover_5.replace('53', '180');
+    topartist5halfyear.cover = newCover2_5;
+    topartist6halfyear = utilities.testfunc6(chart);
+    var newCover_6 = topartist6halfyear.cover.replace('53', '180');
+    var newCover2_6 = newCover_6.replace('53', '180');
+    topartist6halfyear.cover = newCover2_6;
+    topartist7halfyear = utilities.testfunc7(chart);
+    var newCover_7 = topartist7halfyear.cover.replace('53', '180');
+    var newCover2_7 = newCover_7.replace('53', '180');
+    topartist7halfyear.cover = newCover2_7;
+    topartist8halfyear = utilities.testfunc8(chart);
+    var newCover_8 = topartist8halfyear.cover.replace('53', '180');
+    var newCover2_8 = newCover_8.replace('53', '180');
+    topartist8halfyear.cover = newCover2_8;
+    topartist9halfyear = utilities.testfunc9(chart);
+    var newCover_9 = topartist9halfyear.cover.replace('53', '180');
+    var newCover2_9 = newCover_9.replace('53', '180');
+    topartist9halfyear.cover = newCover2_9;
+    topartist10halfyear = utilities.testfunc10(chart);
+    var newCover_10 = topartist10halfyear.cover.replace('53', '180');
+    var newCover2_10 = newCover_10.replace('53', '180');
+    topartist10halfyear.cover = newCover2_10;
+  })
 });
 
-// CREATE WEEK ALBUMS JSON
+// CREATE halfyear ALBUMS JSON
 getChart('top-album-sales', halfYearDate, (err, chart) => {
   if (err) console.log(err);
   const data = JSON.stringify(chart.songs, null, 2);
@@ -1115,9 +1182,54 @@ getChart('top-album-sales', halfYearDate, (err, chart) => {
     }
   });
   console.log('half-year-albums.json was created!');
+  fs.readFile('half-year-albums.json', (err, data) => {
+    console.log("IN READFILE");
+    if (err) throw err;
+    let chart = JSON.parse(data);
+    topalbumhalfyear = utilities.testfunc(chart);
+    var newCover = topalbumhalfyear.cover.replace('53', '180');
+    var newCover2 = newCover.replace('53', '180');
+    topalbumhalfyear.cover = newCover2;
+    topalbum2halfyear = utilities.testfunc2(chart);
+    var newCover_2 = topalbum2halfyear.cover.replace('53', '180');
+    var newCover2_2 = newCover_2.replace('53', '180');
+    topalbum2halfyear.cover = newCover2_2;
+    topalbum3halfyear = utilities.testfunc3(chart);
+    var newCover_3 = topalbum3halfyear.cover.replace('53', '180');
+    var newCover2_3 = newCover_3.replace('53', '180');
+    topalbum3halfyear.cover = newCover2_3;
+    topalbum4halfyear = utilities.testfunc4(chart);
+    var newCover_4 = topalbum4halfyear.cover.replace('53', '180');
+    var newCover2_4 = newCover_4.replace('53', '180');
+    topalbum4halfyear.cover = newCover2_4;
+    topalbum5halfyear = utilities.testfunc5(chart);
+    var newCover_5 = topalbum5halfyear.cover.replace('53', '180');
+    var newCover2_5 = newCover_5.replace('53', '180');
+    topalbum5halfyear.cover = newCover2_5;
+    topalbum6halfyear = utilities.testfunc6(chart);
+    var newCover_6 = topalbum6halfyear.cover.replace('53', '180');
+    var newCover2_6 = newCover_6.replace('53', '180');
+    topalbum6halfyear.cover = newCover2_6;
+    topalbum7halfyear = utilities.testfunc7(chart);
+    var newCover_7 = topalbum7halfyear.cover.replace('53', '180');
+    var newCover2_7 = newCover_7.replace('53', '180');
+    topalbum7halfyear.cover = newCover2_7;
+    topalbum8halfyear = utilities.testfunc8(chart);
+    var newCover_8 = topalbum8halfyear.cover.replace('53', '180');
+    var newCover2_8 = newCover_8.replace('53', '180');
+    topalbum8halfyear.cover = newCover2_8;
+    topalbum9halfyear = utilities.testfunc9(chart);
+    var newCover_9 = topalbum9halfyear.cover.replace('53', '180');
+    var newCover2_9 = newCover_9.replace('53', '180');
+    topalbum9halfyear.cover = newCover2_9;
+    topalbum10halfyear = utilities.testfunc10(chart);
+    var newCover_10 = topalbum10halfyear.cover.replace('53', '180');
+    var newCover2_10 = newCover_10.replace('53', '180');
+    topalbum10halfyear.cover = newCover2_10;
+  })
 });
 
-*/
+
 // CREATE YEAR JSON
 yearDate = getDate(365);
 getChart('hot-100', yearDate, (err, chart) => {
