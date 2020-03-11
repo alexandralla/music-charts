@@ -131,6 +131,7 @@ app.get('/', (req, res) => {
     top100title98: nintyeighthsong.title, top100artist98: nintyeighthsong.artist, top100weeks98: nintyeighthsong.position.weeksOnChart, top100image98: nintyeighthsong.cover,
     top100title99: nintyninthsong.title, top100artist99: nintyninthsong.artist, top100weeks99: nintyninthsong.position.weeksOnChart, top100image99: nintyninthsong.cover,
     top100title100: onehundredthsong.title, top100artist100: onehundredthsong.artist, top100weeks100: onehundredthsong.position.weeksOnChart, top100image100: onehundredthsong.cover,
+
     topartist1: topartist.title, topartistimage1: topartist.cover,
     topartist2: topartist2.title, topartistimage2: topartist2.cover,
     topartist3: topartist3.title, topartistimage3: topartist3.cover,
@@ -259,6 +260,28 @@ app.get('/month', (req, res) => {
         top100title98: nintyeighthmonthsong.title, top100artist98: nintyeighthmonthsong.artist, top100weeks98: nintyeighthmonthsong.position.weeksOnChart, top100image98: nintyeighthmonthsong.cover,
         top100title99: nintyninthmonthsong.title, top100artist99: nintyninthmonthsong.artist, top100weeks99: nintyninthmonthsong.position.weeksOnChart, top100image99: nintyninthmonthsong.cover,
         top100title100: onehundredthmonthsong.title, top100artist100: onehundredthmonthsong.artist, top100weeks100: onehundredthmonthsong.position.weeksOnChart, top100image100: onehundredthmonthsong.cover,
+
+        topartist1: topartistmonth.title, topartistimage1: topartistmonth.cover,
+        topartist2: topartist2month.title, topartistimage2: topartist2month.cover,
+        topartist3: topartist3month.title, topartistimage3: topartist3month.cover,
+        topartist4: topartist4month.title, topartistimage4: topartist4month.cover,
+        topartist5: topartist5month.title, topartistimage5: topartist5month.cover,
+        topartist6: topartist6month.title, topartistimage6: topartist6month.cover,
+        topartist7: topartist7month.title, topartistimage7: topartist7month.cover,
+        topartist8: topartist8month.title, topartistimage8: topartist8month.cover,
+        topartist9: topartist9month.title, topartistimage9: topartist9month.cover,
+        topartist10: topartist10month.title, topartistimage10: topartist10month.cover,
+    
+        topalbum1: topalbummonth.title, topalbumimage1: topalbummonth.cover,
+        topalbum2: topalbum2month.title, topalbumimage2: topalbum2month.cover,
+        topalbum3: topalbum3month.title, topalbumimage3: topalbum3month.cover,
+        topalbum4: topalbum4month.title, topalbumimage4: topalbum4month.cover,
+        topalbum5: topalbum5month.title, topalbumimage5: topalbum5month.cover,
+        topalbum6: topalbum6month.title, topalbumimage6: topalbum6month.cover,
+        topalbum7: topalbum7month.title, topalbumimage7: topalbum7month.cover,
+        topalbum8: topalbum8month.title, topalbumimage8: topalbum8month.cover,
+        topalbum9: topalbum9month.title, topalbumimage9: topalbum9month.cover,
+        topalbum10: topalbum10month.title, topalbumimage10: topalbum10month.cover,
         });
 });
 
@@ -834,7 +857,6 @@ getChart('hot-100', monthDate, (err, chart) => {
 });
 
 
-/*
 // CREATE MONTH ARTISTS JSON
 getChart('artist-100', monthDate, (err, chart) => {
   if (err) console.log(err);
@@ -845,6 +867,52 @@ getChart('artist-100', monthDate, (err, chart) => {
     }
   });
   console.log('month-artists.json was created!');
+
+  fs.readFile('month-artists.json', (err, data) => {
+    console.log("IN READFILE");
+    if (err) throw err;
+    let chart = JSON.parse(data);
+    topartistmonth = utilities.testfunc(chart);
+    var newCover = topartistmonth.cover.replace('53', '180');
+    var newCover2 = newCover.replace('53', '180');
+    topartistmonth.cover = newCover2;
+    topartist2month = utilities.testfunc2(chart);
+    var newCover_2 = topartist2month.cover.replace('53', '180');
+    var newCover2_2 = newCover_2.replace('53', '180');
+    topartist2month.cover = newCover2_2;
+    topartist3month = utilities.testfunc3(chart);
+    var newCover_3 = topartist3month.cover.replace('53', '180');
+    var newCover2_3 = newCover_3.replace('53', '180');
+    topartist3month.cover = newCover2_3;
+    topartist4month = utilities.testfunc4(chart);
+    var newCover_4 = topartist4month.cover.replace('53', '180');
+    var newCover2_4 = newCover_4.replace('53', '180');
+    topartist4month.cover = newCover2_4;
+    topartist5month = utilities.testfunc5(chart);
+    var newCover_5 = topartist5month.cover.replace('53', '180');
+    var newCover2_5 = newCover_5.replace('53', '180');
+    topartist5month.cover = newCover2_5;
+    topartist6month = utilities.testfunc6(chart);
+    var newCover_6 = topartist6month.cover.replace('53', '180');
+    var newCover2_6 = newCover_6.replace('53', '180');
+    topartist6month.cover = newCover2_6;
+    topartist7month = utilities.testfunc7(chart);
+    var newCover_7 = topartist7month.cover.replace('53', '180');
+    var newCover2_7 = newCover_7.replace('53', '180');
+    topartist7month.cover = newCover2_7;
+    topartist8month = utilities.testfunc8(chart);
+    var newCover_8 = topartist8month.cover.replace('53', '180');
+    var newCover2_8 = newCover_8.replace('53', '180');
+    topartist8month.cover = newCover2_8;
+    topartist9month = utilities.testfunc9(chart);
+    var newCover_9 = topartist9month.cover.replace('53', '180');
+    var newCover2_9 = newCover_9.replace('53', '180');
+    topartist9month.cover = newCover2_9;
+    topartist10month = utilities.testfunc10(chart);
+    var newCover_10 = topartist10month.cover.replace('53', '180');
+    var newCover2_10 = newCover_10.replace('53', '180');
+    topartist10month.cover = newCover2_10;
+  })
 });
 
 // CREATE MONTH ALBUMS JSON
@@ -857,9 +925,54 @@ getChart('top-album-sales', monthDate, (err, chart) => {
     }
   });
   console.log('month-albums.json was created!');
+  fs.readFile('month-albums.json', (err, data) => {
+    console.log("IN READFILE");
+    if (err) throw err;
+    let chart = JSON.parse(data);
+    topalbummonth = utilities.testfunc(chart);
+    var newCover = topalbummonth.cover.replace('53', '180');
+    var newCover2 = newCover.replace('53', '180');
+    topalbummonth.cover = newCover2;
+    topalbum2month = utilities.testfunc2(chart);
+    var newCover_2 = topalbum2month.cover.replace('53', '180');
+    var newCover2_2 = newCover_2.replace('53', '180');
+    topalbum2month.cover = newCover2_2;
+    topalbum3month = utilities.testfunc3(chart);
+    var newCover_3 = topalbum3month.cover.replace('53', '180');
+    var newCover2_3 = newCover_3.replace('53', '180');
+    topalbum3month.cover = newCover2_3;
+    topalbum4month = utilities.testfunc4(chart);
+    var newCover_4 = topalbum4month.cover.replace('53', '180');
+    var newCover2_4 = newCover_4.replace('53', '180');
+    topalbum4month.cover = newCover2_4;
+    topalbum5month = utilities.testfunc5(chart);
+    var newCover_5 = topalbum5month.cover.replace('53', '180');
+    var newCover2_5 = newCover_5.replace('53', '180');
+    topalbum5month.cover = newCover2_5;
+    topalbum6month = utilities.testfunc6(chart);
+    var newCover_6 = topalbum6month.cover.replace('53', '180');
+    var newCover2_6 = newCover_6.replace('53', '180');
+    topalbum6month.cover = newCover2_6;
+    topalbum7month = utilities.testfunc7(chart);
+    var newCover_7 = topalbum7month.cover.replace('53', '180');
+    var newCover2_7 = newCover_7.replace('53', '180');
+    topalbum7month.cover = newCover2_7;
+    topalbum8month = utilities.testfunc8(chart);
+    var newCover_8 = topalbum8month.cover.replace('53', '180');
+    var newCover2_8 = newCover_8.replace('53', '180');
+    topalbum8month.cover = newCover2_8;
+    topalbum9month = utilities.testfunc9(chart);
+    var newCover_9 = topalbum9month.cover.replace('53', '180');
+    var newCover2_9 = newCover_9.replace('53', '180');
+    topalbum9month.cover = newCover2_9;
+    topalbum10month = utilities.testfunc10(chart);
+    var newCover_10 = topalbum10month.cover.replace('53', '180');
+    var newCover2_10 = newCover_10.replace('53', '180');
+    topalbum10month.cover = newCover2_10;
+  })
 });
 
-*/
+
 // CREATE HALFYEAR JSON
 halfYearDate = getDate(183);
 getChart('hot-100', halfYearDate, (err, chart) => {

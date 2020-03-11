@@ -170,6 +170,7 @@ ol.top-100-listing {
 .box.top-albums {
     font-size: 30px;
     background-color: #53BAC1;
+    height: 324px;
     width: 1380px;
     grid-row: 3;
     grid-column: 1 / span 4;
@@ -182,7 +183,7 @@ ol.top-100-listing {
     background-color: #53BAC1;
     color: rgb(29, 29, 29);
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .top-albums-listing.top-albums-obj {
@@ -192,9 +193,12 @@ ol.top-100-listing {
     border: 2px outset #FC4445;
     font-size: 20px;
     height: 230px;
-    width: max-content;
+    width: 300px;
     display: inline-block;
     justify-content: center;
+    margin: 10px;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 #logo {
@@ -268,4 +272,8 @@ h4 {
     padding: 10px 10px;
     grid-column: 2;
     grid-row: 1;
+}
+
+#top-albums-cover.top-albums-cover {
+    justify-self: center;
 }
