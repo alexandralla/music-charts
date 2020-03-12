@@ -28,7 +28,6 @@ To build and run the music-charts project, do the following:
 From command line in the project directory, enter the command “node app2”
 Go to google chrome browser
 From browser, type “localhost:8080”
-
 ```
 
 ## Credits
