@@ -8,6 +8,8 @@ Alexandra Llamas, Satvir Singh
 This project is a simple music charts dashboard that presents information taken from the billboard-top-100.
 The dashboard contains information such as top songs, artists, and albums.
 
+![Music Charts Website Demo](demo/demo2.gif)
+
 ## Installation, Build, and Run
 
 To set up the music-charts project, do the following:
